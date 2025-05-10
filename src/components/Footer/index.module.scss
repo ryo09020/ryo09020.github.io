@@ -1,0 +1,25 @@
+/* src/components/Footer/index.module.scss */
+.footer {
+  background-color: #333;
+  color: #f4f7f6;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: auto; /* メインコンテンツが短い場合でもフッターを最下部に */
+
+  .socialLinks {
+    margin-bottom: 1rem;
+    a {
+      color: #f4f7f6;
+      margin: 0 0.75rem;
+      font-size: 1.5rem; // アイコンフォントを使う場合など
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+}

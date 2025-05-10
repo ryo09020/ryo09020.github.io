@@ -1,0 +1,35 @@
+/* src/components/Header/index.module.scss */
+.header {
+  background-color: #ffffff; // 例: 白背景
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; // ヘッダーを上部に固定 (任意)
+  top: 0;
+  z-index: 1000;
+
+  .logo a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .navLinks {
+    a {
+      color: #555;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.2s ease-in-out;
+
+      &:hover,
+      &.active { // アクティブなリンクのスタイル (NavLinkを使う場合)
+        color: #007bff;
+      }
+    }
+  }
+}

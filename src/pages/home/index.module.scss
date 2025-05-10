@@ -1,0 +1,43 @@
+/* src/pages/HomePage/index.module.scss */
+.hero {
+    background-color: #e9ecef; // 例: 明るいグレー
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  
+    .title {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #343a40;
+    }
+  
+    .subtitle {
+      font-size: 1.3rem;
+      color: #6c757d;
+      margin-bottom: 2rem;
+    }
+  
+    .ctaButton { // Call To Action Button
+      background-color: #007bff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+  }
