@@ -3,9 +3,11 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { AnimatePresence, motion } from 'framer-motion';
 import Header from './Header';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Layout = () => {
     const location = useLocation();
+    const { t } = useTranslation();
 
     useEffect(() => {
         const lenis = new Lenis({
@@ -55,12 +57,12 @@ const Layout = () => {
                         <div className="layout__footer-info">
                             <h3 className="layout__footer-title">Ryo</h3>
                             <p className="layout__footer-description">
-                                Frontend Developer & UI Designer based in Tokyo, Japan
+                                {t('footerDescription')}
                             </p>
                         </div>
                         <div className="layout__footer-links">
                             <div className="layout__footer-section">
-                                <h4 className="layout__footer-section-title">Connect</h4>
+                                <h4 className="layout__footer-section-title">{t('connect')}</h4>
                                 <div className="layout__footer-link-list">
                                     <a href="https://github.com/ryo09020" target="_blank" rel="noopener noreferrer" className="layout__footer-link">
                                         GitHub
@@ -74,7 +76,7 @@ const Layout = () => {
                                 </div>
                             </div>
                             <div className="layout__footer-section">
-                                <h4 className="layout__footer-section-title">Contact</h4>
+                                <h4 className="layout__footer-section-title">{t('contact')}</h4>
                                 <div className="layout__footer-link-list">
                                     <a href="mailto:hello@ryo.dev" className="layout__footer-link">
                                         hello@ryo.dev
@@ -86,10 +88,10 @@ const Layout = () => {
                     </div>
                     <div className="layout__footer-bottom">
                         <span className="layout__footer-copyright">
-                            © 2024 Ryo. All rights reserved.
+                            © 2024 Ryo. {t('allRightsReserved')}
                         </span>
                         <span className="layout__footer-made">
-                            Made with ❤️ in Tokyo
+                            {t('madeWithLove')}
                         </span>
                     </div>
                 </div>

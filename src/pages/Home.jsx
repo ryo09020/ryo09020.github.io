@@ -1,46 +1,10 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-
-const PROJECTS = [
-    {
-        id: '01',
-        title: 'E-Commerce Platform',
-        description: 'Modern React-based e-commerce solution with advanced filtering and real-time inventory management.',
-        tags: ['React', 'Node.js', 'MongoDB'],
-        year: '2024',
-        status: 'Live'
-    },
-    {
-        id: '02',
-        title: 'Data Visualization Dashboard',
-        description: 'Interactive dashboard for complex data analysis with D3.js and custom chart components.',
-        tags: ['D3.js', 'TypeScript', 'Python'],
-        year: '2023',
-        status: 'Live'
-    },
-    {
-        id: '03',
-        title: 'Mobile Banking App',
-        description: 'Secure mobile banking application with biometric authentication and real-time transactions.',
-        tags: ['React Native', 'Firebase', 'Security'],
-        year: '2023',
-        status: 'Development'
-    }
-];
-
-const SKILLS = [
-    'Frontend Development',
-    'React & Next.js',
-    'TypeScript',
-    'UI/UX Design',
-    'Node.js',
-    'Database Design',
-    'API Development',
-    'Mobile Development'
-];
+import { useTranslation } from '../hooks/useTranslation';
 
 const Home = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="home">
             {/* Hero Section */}
@@ -53,21 +17,19 @@ const Home = () => {
                         className="home__hero-content"
                     >
                         <h1 className="home__hero-title">
-                            Frontend Developer
+                            {t('heroTitle')}
                             <br />
-                            <span className="home__hero-title-accent">& UI Designer</span>
+                            <span className="home__hero-title-accent">{t('heroTitleAccent')}</span>
                         </h1>
                         <p className="home__hero-description">
-                            I create digital experiences that bridge the gap between design and technology. 
-                            Based in Tokyo, I specialize in building modern web applications with a focus 
-                            on user experience and clean code.
+                            {t('heroDescription')}
                         </p>
                         <div className="home__hero-actions">
                             <NavLink to="/profile" className="home__hero-btn home__hero-btn--primary">
-                                View My Work
+                                {t('viewMyWork')}
                             </NavLink>
                             <NavLink to="/profile" className="home__hero-btn home__hero-btn--secondary">
-                                About Me
+                                {t('aboutMe')}
                             </NavLink>
                         </div>
                     </motion.div>
@@ -96,10 +58,10 @@ const Home = () => {
                         transition={{ duration: 0.6 }}
                         className="home__skills-title"
                     >
-                        Skills & Expertise
+                        {t('skillsTitle')}
                     </motion.h2>
                     <div className="home__skills-grid">
-                        {SKILLS.map((skill, index) => (
+                        {t('skills').map((skill, index) => (
                             <motion.div
                                 key={skill}
                                 initial={{ opacity: 0, y: 20 }}
@@ -125,16 +87,16 @@ const Home = () => {
                         transition={{ duration: 0.6 }}
                         className="home__projects-header"
                     >
-                        <h2 className="home__projects-title">Selected Projects</h2>
+                        <h2 className="home__projects-title">{t('projectsTitle')}</h2>
                         <p className="home__projects-subtitle">
-                            A showcase of my recent work and personal projects
+                            {t('projectsSubtitle')}
                         </p>
                     </motion.div>
 
                     <div className="home__projects-list">
-                        {PROJECTS.map((project, index) => (
+                        {t('projects').map((project, index) => (
                             <motion.article
-                                key={project.id}
+                                key={project.title}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-10%" }}
@@ -142,11 +104,11 @@ const Home = () => {
                                 className="home__project-card"
                             >
                                 <div className="home__project-header">
-                                    <span className="home__project-number">{project.id}</span>
+                                    <span className="home__project-number">{String(index + 1).padStart(2, '0')}</span>
                                     <div className="home__project-meta">
-                                        <span className="home__project-year">{project.year}</span>
+                                        <span className="home__project-year">2024</span>
                                         <span className={`home__project-status home__project-status--${project.status.toLowerCase()}`}>
-                                            {project.status}
+                                            {t(project.status.toLowerCase())}
                                         </span>
                                     </div>
                                 </div>
@@ -158,9 +120,9 @@ const Home = () => {
                                     ))}
                                 </div>
                                 <button className="home__project-link">
-                                    View Project
+                                    {t('viewProject')}
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </motion.article>
@@ -179,14 +141,13 @@ const Home = () => {
                         transition={{ duration: 0.6 }}
                         className="home__contact-content"
                     >
-                        <h2 className="home__contact-title">Let's Work Together</h2>
+                        <h2 className="home__contact-title">{t('contactTitle')}</h2>
                         <p className="home__contact-description">
-                            I'm always interested in new opportunities and collaborations. 
-                            Feel free to reach out if you'd like to discuss a project.
+                            {t('contactDescription')}
                         </p>
                         <div className="home__contact-actions">
                             <a href="mailto:hello@ryo.dev" className="home__contact-btn">
-                                Get In Touch
+                                {t('getInTouch')}
                             </a>
                             <div className="home__contact-links">
                                 <a href="https://github.com/ryo09020" target="_blank" rel="noopener noreferrer" className="home__contact-link">

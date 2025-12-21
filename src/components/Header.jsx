@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Header = () => {
     const { language, toggleLanguage } = useLanguage();
+    const { t } = useTranslation();
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
@@ -24,9 +26,9 @@ const Header = () => {
     }, [location]);
 
     const navItems = [
-        { path: '/', label: 'Home' },
-        { path: '/profile', label: 'About' },
-        { path: '/blog', label: 'Work' },
+        { path: '/', label: t('home') },
+        { path: '/profile', label: t('about') },
+        { path: '/blog', label: t('work') },
     ];
 
     return (
@@ -62,8 +64,9 @@ const Header = () => {
                     <button
                         onClick={toggleLanguage}
                         className="header__lang-btn"
+                        aria-label={`Switch to ${language === 'en' ? 'Japanese' : 'English'}`}
                     >
-                        {language.toUpperCase()}
+                        {language === 'en' ? 'JP' : 'EN'}
                     </button>
 
                     {/* Mobile Menu Toggle */}

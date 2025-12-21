@@ -1,49 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../context/LanguageContext';
-
-const EXPERIENCE = [
-    {
-        year: '2022 - Present',
-        role: 'Senior Frontend Developer',
-        company: 'Tech Innovation Inc.',
-        description: 'Leading frontend development for enterprise web applications using React, TypeScript, and modern development practices. Mentoring junior developers and establishing coding standards.',
-        technologies: ['React', 'TypeScript', 'Next.js', 'GraphQL']
-    },
-    {
-        year: '2020 - 2022',
-        role: 'Frontend Developer',
-        company: 'Digital Solutions Co.',
-        description: 'Developed responsive web applications and collaborated with design teams to create intuitive user interfaces. Implemented performance optimizations and accessibility improvements.',
-        technologies: ['JavaScript', 'Vue.js', 'SCSS', 'Webpack']
-    },
-    {
-        year: '2019 - 2020',
-        role: 'UI/UX Designer',
-        company: 'Creative Studio',
-        description: 'Designed user interfaces for web and mobile applications. Conducted user research and created design systems for consistent brand experiences.',
-        technologies: ['Figma', 'Adobe XD', 'Sketch', 'Prototyping']
-    }
-];
-
-const EDUCATION = [
-    {
-        year: '2015 - 2019',
-        degree: 'Bachelor of Computer Science',
-        school: 'Tokyo University',
-        description: 'Focused on software engineering, algorithms, and human-computer interaction. Graduated with honors.'
-    }
-];
-
-const SKILLS = {
-    'Frontend': ['React', 'Vue.js', 'TypeScript', 'Next.js', 'Nuxt.js'],
-    'Styling': ['CSS3', 'SCSS', 'Tailwind CSS', 'Styled Components'],
-    'Tools': ['Git', 'Webpack', 'Vite', 'Docker', 'Figma'],
-    'Backend': ['Node.js', 'Express', 'MongoDB', 'PostgreSQL']
-};
+import { useTranslation } from '../hooks/useTranslation';
 
 const Profile = () => {
-    const { language } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <div className="profile">
@@ -56,24 +16,22 @@ const Profile = () => {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="profile__hero-content"
                     >
-                        <h1 className="profile__hero-title">About Me</h1>
+                        <h1 className="profile__hero-title">{t('aboutMeTitle')}</h1>
                         <p className="profile__hero-description">
-                            I'm a passionate frontend developer and UI designer based in Tokyo, Japan. 
-                            With over 4 years of experience, I specialize in creating modern, 
-                            accessible web applications that provide exceptional user experiences.
+                            {t('profileDescription')}
                         </p>
                         <div className="profile__hero-stats">
                             <div className="profile__stat">
                                 <span className="profile__stat-number">4+</span>
-                                <span className="profile__stat-label">Years Experience</span>
+                                <span className="profile__stat-label">{t('yearsExperience')}</span>
                             </div>
                             <div className="profile__stat">
                                 <span className="profile__stat-number">50+</span>
-                                <span className="profile__stat-label">Projects Completed</span>
+                                <span className="profile__stat-label">{t('projectsCompleted')}</span>
                             </div>
                             <div className="profile__stat">
                                 <span className="profile__stat-number">15+</span>
-                                <span className="profile__stat-label">Happy Clients</span>
+                                <span className="profile__stat-label">{t('happyClients')}</span>
                             </div>
                         </div>
                     </motion.div>
@@ -101,10 +59,10 @@ const Profile = () => {
                         transition={{ duration: 0.6 }}
                         className="profile__section-title"
                     >
-                        Work Experience
+                        {t('workExperience')}
                     </motion.h2>
                     <div className="profile__timeline">
-                        {EXPERIENCE.map((item, index) => (
+                        {t('experience').map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, x: -30 }}
@@ -143,10 +101,10 @@ const Profile = () => {
                         transition={{ duration: 0.6 }}
                         className="profile__section-title"
                     >
-                        Skills & Technologies
+                        {t('skillsTechnologies')}
                     </motion.h2>
                     <div className="profile__skills-grid">
-                        {Object.entries(SKILLS).map(([category, skills], index) => (
+                        {Object.entries(t('skillsCategories')).map(([category, skills], index) => (
                             <motion.div
                                 key={category}
                                 initial={{ opacity: 0, y: 20 }}
@@ -177,10 +135,10 @@ const Profile = () => {
                         transition={{ duration: 0.6 }}
                         className="profile__section-title"
                     >
-                        Education
+                        {t('education')}
                     </motion.h2>
                     <div className="profile__education-list">
-                        {EDUCATION.map((item, index) => (
+                        {t('educationData').map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
@@ -211,16 +169,12 @@ const Profile = () => {
                         transition={{ duration: 0.6 }}
                         className="profile__personal-content"
                     >
-                        <h2 className="profile__section-title">Beyond Code</h2>
+                        <h2 className="profile__section-title">{t('beyondCode')}</h2>
                         <p className="profile__personal-text">
-                            When I'm not coding, you can find me exploring Tokyo's coffee shops, 
-                            reading about design philosophy, or experimenting with new technologies. 
-                            I believe that great design comes from understanding both technology and human behavior.
+                            {t('personalText1')}
                         </p>
                         <p className="profile__personal-text">
-                            I'm passionate about creating inclusive digital experiences and staying 
-                            up-to-date with the latest web technologies. I enjoy mentoring other 
-                            developers and contributing to open-source projects.
+                            {t('personalText2')}
                         </p>
                     </motion.div>
                 </div>
