@@ -93,6 +93,10 @@
     display: flex;
     align-items: center;
     gap: $space-md;
+
+    @media (max-width: $bp-mobile) {
+      gap: $space-sm;
+    }
   }
 
   &__lang-btn {
@@ -104,6 +108,12 @@
     border-radius: 6px;
     background-color: $c-white;
     transition: all 0.3s $ease-out-expo;
+    min-width: 44px; // Ensure minimum touch target size for mobile
+    min-height: 36px; // Ensure minimum touch target height for mobile
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       color: $c-black;
@@ -111,8 +121,12 @@
       background-color: $c-gray-100;
     }
 
+    // Responsive adjustments
     @media (max-width: $bp-mobile) {
-      display: none;
+      font-size: $text-sm;
+      padding: $space-sm;
+      min-width: 40px;
+      min-height: 40px;
     }
   }
 
