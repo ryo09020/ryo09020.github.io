@@ -108,26 +108,53 @@
     border-radius: 6px;
     background-color: $c-white;
     transition: all 0.3s $ease-out-expo;
-    min-width: 44px; // Ensure minimum touch target size for mobile
-    min-height: 36px; // Ensure minimum touch target height for mobile
+    min-width: 56px;
+    min-height: 34px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+    cursor: pointer;
 
     &:hover {
       color: $c-black;
       border-color: $c-accent;
       background-color: $c-gray-100;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    // Responsive adjustments
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
     @media (max-width: $bp-mobile) {
       font-size: $text-sm;
       padding: $space-sm;
-      min-width: 40px;
-      min-height: 40px;
+      min-width: 52px;
+      min-height: 38px;
+      gap: 4px;
     }
+  }
+
+  &__lang-icon {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    opacity: 0.8;
+
+    @media (max-width: $bp-mobile) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__lang-text {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
   }
 
   &__menu-toggle {
@@ -171,7 +198,7 @@
     border-bottom: 1px solid $c-gray-200;
     overflow: hidden;
 
-    @media (min-width: $bp-tablet + 1px) {
+    @media (min-width: #{$bp-tablet + 1px}) {
       display: none;
     }
   }
