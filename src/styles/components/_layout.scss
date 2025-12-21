@@ -1,0 +1,129 @@
+@use '../variables' as *;
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: 1;
+  }
+
+  &__footer {
+    background-color: $c-gray-900;
+    color: $c-white;
+    padding: $space-4xl $space-lg $space-2xl;
+
+    @media (max-width: $bp-tablet) {
+      padding: $space-3xl $space-md $space-xl;
+    }
+
+    &-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-4xl;
+      margin-bottom: $space-3xl;
+
+      @media (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
+        gap: $space-2xl;
+        margin-bottom: $space-2xl;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+    }
+
+    &-title {
+      font-size: $text-2xl;
+      font-weight: 800;
+      color: $c-white;
+      margin-bottom: $space-sm;
+    }
+
+    &-description {
+      font-size: $text-base;
+      color: $c-gray-400;
+      line-height: 1.6;
+    }
+
+    &-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-2xl;
+
+      @media (max-width: $bp-mobile) {
+        grid-template-columns: 1fr;
+        gap: $space-xl;
+      }
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+
+      &-title {
+        font-size: $text-sm;
+        font-weight: 700;
+        color: $c-white;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: $space-sm;
+      }
+    }
+
+    &-link-list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-sm;
+    }
+
+    &-link {
+      font-size: $text-base;
+      color: $c-gray-400;
+      transition: color 0.3s $ease-out-expo;
+
+      &:hover {
+        color: $c-white;
+      }
+    }
+
+    &-text {
+      font-size: $text-base;
+      color: $c-gray-500;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: $space-xl;
+      border-top: 1px solid $c-gray-700;
+
+      @media (max-width: $bp-mobile) {
+        flex-direction: column;
+        gap: $space-md;
+        text-align: center;
+      }
+    }
+
+    &-copyright {
+      font-size: $text-sm;
+      color: $c-gray-500;
+    }
+
+    &-made {
+      font-size: $text-sm;
+      color: $c-gray-500;
+    }
+  }
+}

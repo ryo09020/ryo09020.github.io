@@ -1,0 +1,58 @@
+// Design System Variables
+$base-size: 16px;
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1440px;
+
+// Colors - Minimal & Modern
+$c-black: #0a0a0a;
+$c-white: #ffffff;
+$c-gray-100: #f8f9fa;
+$c-gray-200: #e9ecef;
+$c-gray-300: #dee2e6;
+$c-gray-400: #ced4da;
+$c-gray-500: #adb5bd;
+$c-gray-600: #6c757d;
+$c-gray-700: #495057;
+$c-gray-800: #343a40;
+$c-gray-900: #212529;
+
+// Accent Colors
+$c-accent: #6366f1;
+$c-accent-light: #a5b4fc;
+$c-accent-dark: #4338ca;
+
+// Spacing Scale
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 3rem;
+$space-3xl: 4rem;
+$space-4xl: 6rem;
+
+// Typography Scale
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$text-6xl: 3.75rem;
+
+// Easing Functions
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+$ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Z-index Scale
+$z-nav: 100;
+$z-modal: 200;
+$z-cursor: 999;
