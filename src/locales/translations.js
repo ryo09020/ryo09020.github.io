@@ -191,7 +191,7 @@ export const translations = {
         role: 'Hackathon Winner',
         company: 'JPHACK 2023',
         year: 'November 2023',
-        description: 'Won J-Stream Award at JPHACK 2023, one of Japan\'s largest hackathons. Developed innovative solution within 24-hour timeframe with team collaboration.',
+        description: 'Won J-Stream Award at JPHACK 2023, one of Japan\'s largest hackathons. Developed innovative solution over about a month with team collaboration.',
         technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping'],
       }
     ],
@@ -457,7 +457,7 @@ export const translations = {
         role: 'ハッカソン受賞者',
         company: 'JPHACK 2023',
         year: '2023年11月',
-        description: '日本最大級のハッカソンJPHACK 2023にてJ-Stream賞を受賞。24時間という制限時間内でチームコラボレーションにより革新的なソリューションを開発。',
+        description: '日本最大級のハッカソンJPHACK 2023にてJ-Stream賞を受賞。約1ヶ月の開発期間でチームコラボレーションにより革新的なソリューションを開発。',
         technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング']
       }
     ],
