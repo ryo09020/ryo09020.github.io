@@ -4,7 +4,7 @@ export const translations = {
     home: 'Home',
     about: 'About',
     work: 'Work',
-    
+
     // Home Page
     heroTitle: 'Software Engineer',
     heroTitleAccent: '& Graduate Student',
@@ -19,7 +19,7 @@ export const translations = {
     getInTouch: 'Get In Touch',
     readMore: 'Read More',
     moreContentSoon: 'More Projects Coming Soon',
-    
+
     // Skills
     skills: [
       'Ruby on Rails',
@@ -31,7 +31,7 @@ export const translations = {
       'System Architecture',
       'Agile Development'
     ],
-    
+
     // Projects
     projects: [
       {
@@ -56,25 +56,53 @@ export const translations = {
         category: 'Hackathon'
       }
     ],
-    
+
+    // Personality Section
+    personalityTitle: 'Personality & Strengths',
+    personalityConcept: 'Rational Mind, Inclusive Heart. Driving teams with logic and positivity.',
+    personalityIntro: 'My strength lies in the hybrid of "rational judgment" based on objective data analysis and "social drive" to build trust with people.',
+    personalityPoints: [
+      {
+        title: 'Analytical & Rational',
+        description: 'I value "why" and evidence. Even in ambiguous situations, I clarify facts and making rational decisions to eliminate project uncertainties.'
+      },
+      {
+        title: 'Social & Inclusive',
+        description: 'I don\'t just rely on logic; I also leverage social skills and inclusivity. I excel at accepting diverse backgrounds and building unified teams where no one is left behind.'
+      },
+      {
+        title: 'Articulate & Influential',
+        description: 'I have the ability to translate complex logic into understandable language. By communicating with enthusiasm while respecting others\' emotions, I drive projects forward.'
+      }
+    ],
+    personalityTags: [
+      '#AnalyticalThinking',
+      '#RationalJudgment',
+      '#ProcessImprovement',
+      '#Woo',
+      '#Positivity',
+      '#Includer',
+      '#TeamBuilding'
+    ],
+
     // Profile Page
     aboutMeTitle: 'About Me',
     profileDescription: "I'm a graduate student at Tohoku University pursuing a Master's in Information Science, with hands-on experience in software development at leading tech companies. I'm passionate about building scalable web applications and exploring cutting-edge technologies.",
     yearsExperience: 'Years Experience',
     projectsCompleted: 'Projects Completed',
     hackathonWins: 'Hackathon Awards',
-    
+
     // Experience Categories
     academicExperience: 'Academic Experience',
     professionalExperience: 'Professional Experience',
     extracurricularActivities: 'Extracurricular Activities',
-    
+
     skillsTechnologies: 'Skills & Technologies',
     education: 'Education',
     beyondCode: 'Beyond Development',
     personalText1: 'When I\'m not coding or studying, I enjoy participating in hackathons, exploring new technologies, and contributing to open-source projects. I believe in continuous learning and staying at the forefront of technological innovation.',
-    personalText2: 'My international experience, including my upcoming study abroad at University at Albany, has broadened my perspective on global software development practices and cross-cultural collaboration.',
-    
+
+
     // Experience Data
     academicExp: [
       {
@@ -92,7 +120,7 @@ export const translations = {
         technologies: ['Computer Science', 'Algorithms', 'Software Engineering', 'Mathematics']
       }
     ],
-    
+
     professionalExp: [
       {
         role: 'Software Engineer',
@@ -116,7 +144,7 @@ export const translations = {
         technologies: ['Ruby on Rails', 'AWS', 'Full-stack Development', 'Cloud Services']
       }
     ],
-    
+
     extracurricularExp: [
       {
         role: 'Study Abroad Student',
@@ -133,7 +161,7 @@ export const translations = {
         technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping']
       }
     ],
-    
+
     // Education
     educationData: [
       {
@@ -149,7 +177,7 @@ export const translations = {
         description: 'Graduated with focus on computer science and software development. Built strong foundation in engineering principles and programming.'
       }
     ],
-    
+
     // Skills Categories
     skillsCategories: {
       'Backend': ['Ruby on Rails', 'Go', 'Node.js', 'API Design'],
@@ -158,7 +186,7 @@ export const translations = {
       'Database': ['PostgreSQL', 'MySQL', 'Redis', 'Database Design'],
       'Tools & Others': ['Git', 'Linux', 'Agile', 'System Design']
     },
-    
+
     // Blog Page
     blogTitle: 'Blog & Insights',
     blogDescription: 'Thoughts on software development, academic research, and technology trends',
@@ -179,14 +207,14 @@ export const translations = {
         category: 'Career'
       }
     ],
-    
+
     // Footer
     footerDescription: 'Graduate Student & Software Engineer based in Sendai, Japan',
     connect: 'Connect',
     contact: 'Contact',
     allRightsReserved: 'All rights reserved.',
     madeWithLove: 'Made with ❤️ in Sendai',
-    
+
     // Common
     viewProject: 'View Project',
     live: 'Live',
@@ -194,13 +222,13 @@ export const translations = {
     completed: 'Completed',
     minRead: 'min read'
   },
-  
+
   jp: {
     // Header
     home: 'ホーム',
     about: 'プロフィール',
     work: '実績',
-    
+
     // Home Page
     heroTitle: 'ソフトウェアエンジニア',
     heroTitleAccent: '& 大学院生',
@@ -215,7 +243,7 @@ export const translations = {
     getInTouch: 'お問い合わせ',
     readMore: '続きを読む',
     moreContentSoon: 'より多くのプロジェクトが近日公開予定',
-    
+
     // Skills
     skills: [
       'Ruby on Rails',
@@ -227,7 +255,7 @@ export const translations = {
       'システム設計',
       'アジャイル開発'
     ],
-    
+
     // Projects
     projects: [
       {
@@ -252,25 +280,54 @@ export const translations = {
         category: 'ハッカソン'
       }
     ],
-    
+
+    // Personality Section
+    personalityTitle: '性格と強み',
+    personalityConcept: 'ロジカルな頭脳と、ポジティブな求心力。事実に基づいて判断し、熱意を持ってチームを動かす。',
+    personalityIntro: '私の強みは、客観的なデータ分析に基づいた「合理的な判断力」と、初対面の人とも信頼関係を築ける「社交的な推進力」を兼ね備えていることです。',
+    personalityPoints: [
+      {
+        title: 'Analytical & Rational（分析と合理性）',
+        description: '「なぜそうなるのか？」という根拠を大切にします。曖昧な状況でも事実を整理し、白黒を明確に切り分けることで、プロジェクトにおける迷いをなくし、合理的な意思決定をサポートします。'
+      },
+      {
+        title: 'Social & Inclusive（社交性と受容性）',
+        description: '論理一辺倒ではなく、チームビルディングにおいては「社交性」「ポジティブ」「包含」の資質を発揮します。多様なバックグラウンドを持つメンバーを柔軟に受け入れ、誰も取り残さない一体感のあるチームを作ることが得意です。'
+      },
+      {
+        title: 'Articulate（言語化と伝達）',
+        description: '複雑な分析結果やロジックを、誰もが理解できる言葉で表現する「コミュニケーション」力があります。理屈で正論を述べるだけでなく、相手の感情に配慮しながら熱意を持って伝えることで、周囲を巻き込みながらプロジェクトを前進させます。'
+      }
+    ],
+    personalityTags: [
+      '#分析思考',
+      '#弁別性',
+      '#合理的判断',
+      '#改善プロセス',
+      '#社交性',
+      '#ポジティブ',
+      '#受容力',
+      '#チームビルディング'
+    ],
+
     // Profile Page
     aboutMeTitle: 'プロフィール',
     profileDescription: '東北大学大学院情報科学研究科で修士課程を履修し、大手テック企業でのソフトウェア開発の実務経験を持つ大学院生です。スケーラブルなWebアプリケーションの構築と最先端技術の探求に情熱を注いでいます。',
     yearsExperience: '年の経験',
     projectsCompleted: 'プロジェクト完了',
     hackathonWins: 'ハッカソン受賞',
-    
+
     // Experience Categories
     academicExperience: '学業経験',
     professionalExperience: '実務経験',
     extracurricularActivities: '課外活動',
-    
+
     skillsTechnologies: 'スキル・技術',
     education: '学歴',
     beyondCode: '開発以外の活動',
     personalText1: 'コーディングや勉強をしていない時は、ハッカソンへの参加、新しい技術の探求、オープンソースプロジェクトへの貢献を楽しんでいます。継続的な学習と技術革新の最前線に立つことを信条としています。',
-    personalText2: 'Albany大学への留学予定を含む国際的な経験により、グローバルなソフトウェア開発の実践と異文化間のコラボレーションに対する視野が広がりました。',
-    
+
+
     // Experience Data
     academicExp: [
       {
@@ -288,7 +345,7 @@ export const translations = {
         technologies: ['コンピュータサイエンス', 'アルゴリズム', 'ソフトウェア工学', '数学']
       }
     ],
-    
+
     professionalExp: [
       {
         role: 'ソフトウェアエンジニア',
@@ -312,7 +369,7 @@ export const translations = {
         technologies: ['Ruby on Rails', 'AWS', 'フルスタック開発', 'クラウドサービス']
       }
     ],
-    
+
     extracurricularExp: [
       {
         role: '交換留学生',
@@ -329,7 +386,7 @@ export const translations = {
         technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング']
       }
     ],
-    
+
     // Education
     educationData: [
       {
@@ -345,7 +402,7 @@ export const translations = {
         description: 'コンピュータサイエンスとソフトウェア開発に焦点を当てて卒業。工学の原理とプログラミングの強固な基盤を構築。'
       }
     ],
-    
+
     // Skills Categories
     skillsCategories: {
       'バックエンド': ['Ruby on Rails', 'Go', 'Node.js', 'API設計'],
@@ -354,7 +411,7 @@ export const translations = {
       'データベース': ['PostgreSQL', 'MySQL', 'Redis', 'データベース設計'],
       'ツール・その他': ['Git', 'Linux', 'アジャイル', 'システム設計']
     },
-    
+
     // Blog Page
     blogTitle: 'ブログ・インサイト',
     blogDescription: 'ソフトウェア開発、学術研究、技術トレンドに関する考察',
@@ -375,14 +432,14 @@ export const translations = {
         category: 'キャリア'
       }
     ],
-    
+
     // Footer
     footerDescription: '仙台を拠点とする大学院生・ソフトウェアエンジニア',
     connect: '連絡先',
     contact: 'お問い合わせ',
     allRightsReserved: 'All rights reserved.',
     madeWithLove: '仙台で❤️を込めて作成',
-    
+
     // Common
     viewProject: 'プロジェクトを見る',
     live: '稼働中',

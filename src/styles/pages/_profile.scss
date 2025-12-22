@@ -446,6 +446,123 @@
     }
   }
 
+  // Personality Section
+  &__personality {
+    padding: $space-4xl 0;
+    background-color: $c-white;
+
+    @media (max-width: $bp-tablet) {
+      padding: $space-3xl 0;
+    }
+
+    &-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto $space-3xl;
+    }
+
+    &-concept {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: $c-accent;
+      margin-bottom: $space-lg;
+      line-height: 1.4;
+    }
+
+    &-intro {
+      font-size: $text-lg;
+      line-height: 1.8;
+      color: $c-gray-600;
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $space-xl;
+      margin-bottom: $space-3xl;
+
+      @media (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
+        gap: $space-lg;
+      }
+    }
+
+    &-card {
+      background-color: $c-gray-100;
+      padding: $space-xl;
+      border-radius: 12px;
+      border: 1px solid $c-gray-200;
+      transition: all 0.3s $ease-out-expo;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        border-color: $c-accent;
+
+        .profile__personality-card-number {
+          color: $c-accent;
+          opacity: 0.1;
+          transform: scale(1.2);
+        }
+      }
+
+      &-number {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 6rem;
+        font-weight: 900;
+        color: $c-gray-200;
+        opacity: 0.3;
+        transition: all 0.5s $ease-out-expo;
+        z-index: 0;
+      }
+
+      &-title {
+        font-size: $text-lg;
+        font-weight: 700;
+        color: $c-black;
+        margin-bottom: $space-md;
+        position: relative;
+        z-index: 1;
+      }
+
+      &-description {
+        font-size: $text-base;
+        line-height: 1.7;
+        color: $c-gray-600;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $space-md;
+    }
+
+    &-tag {
+      padding: $space-xs $space-lg;
+      background-color: $c-white;
+      border: 1px solid $c-gray-200;
+      border-radius: 100px;
+      font-size: $text-sm;
+      color: $c-gray-600;
+      font-weight: 500;
+      transition: all 0.3s $ease-out-expo;
+
+      &:hover {
+        border-color: $c-accent;
+        color: $c-accent;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
   // Personal Section
   &__personal {
     padding: $space-4xl 0;
@@ -474,10 +591,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.2;
   }
+
   50% {
     transform: scale(1.1);
     opacity: 0.3;

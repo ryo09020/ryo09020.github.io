@@ -209,6 +209,52 @@ const Profile = () => {
                 </div>
             </section>
 
+            {/* Personality Section */}
+            <section className="profile__personality">
+                <div className="profile__container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="profile__section-header"
+                    >
+                        <h2 className="profile__section-title">{t('personalityTitle')}</h2>
+                        <h3 className="profile__personality-concept">{t('personalityConcept')}</h3>
+                        <p className="profile__personality-intro">{t('personalityIntro')}</p>
+                    </motion.div>
+
+                    <div className="profile__personality-grid">
+                        {t('personalityPoints').map((point, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: index * 0.2 }}
+                                className="profile__personality-card"
+                            >
+                                <div className="profile__personality-card-number">0{index + 1}</div>
+                                <h4 className="profile__personality-card-title">{point.title}</h4>
+                                <p className="profile__personality-card-description">{point.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="profile__personality-tags"
+                    >
+                        {t('personalityTags').map((tag, index) => (
+                            <span key={index} className="profile__personality-tag">{tag}</span>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Personal Section */}
             <section className="profile__personal">
                 <div className="profile__container">
@@ -223,9 +269,7 @@ const Profile = () => {
                         <p className="profile__personal-text">
                             {t('personalText1')}
                         </p>
-                        <p className="profile__personal-text">
-                            {t('personalText2')}
-                        </p>
+
                     </motion.div>
                 </div>
             </section>
