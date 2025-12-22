@@ -40,25 +40,35 @@ export const translations = {
     // Projects
     projects: [
       {
-        title: 'Passkey Authentication System',
-        description: 'Implemented modern passwordless authentication using Passkey technology at MoneyForward, enhancing security and user experience.',
-        tags: ['Ruby on Rails', 'Passkey', 'Authentication'],
-        status: 'Live',
-        category: 'Professional'
+        title: 'Ketchup',
+        description: 'A comprehensive task management platform adopted by the Tohoku University Student Project. I am energetically developing this to solve real-world productivity challenges, iterating daily based on user feedback. The app is publicly available.',
+        tags: ['TypeScript', 'React', 'PostgreSQL'],
+        status: 'Active Development',
+        category: 'Academic',
+        links: [
+          { label: 'App', url: 'https://ketch-up.net' },
+          { label: 'News', url: 'https://www.is.tohoku.ac.jp/jp/news/information/detail---id-5563.html' }
+        ],
+        image: '/images/ketchup.png',
+        imagePosition: 'top'
       },
       {
-        title: 'Task Management Application',
-        description: 'Developed a comprehensive task management system as part of Tohoku University student project, focusing on team collaboration and productivity.',
-        tags: ['Go', 'React', 'PostgreSQL'],
-        status: 'Development',
-        category: 'Academic'
-      },
-      {
-        title: 'JPHACK 2023 Award Winner',
-        description: 'Created an innovative solution that won the J-Stream Award at JPHACK 2023, one of Japan\'s largest hackathons.',
-        tags: ['Hackathon', 'Innovation', 'Team Project'],
+        title: 'Finger Drawing',
+        description: 'An innovative creative tool that allows users to draw digitally using only their fingers in the air. By tracking hand gestures with computer vision, it enables a touchless and intuitive drawing experience.',
+        tags: ['Python', 'OpenCV', 'Hackathon'],
         status: 'Completed',
-        category: 'Hackathon'
+        category: 'Hackathon',
+        links: [
+          { label: 'View Slides', url: 'https://docs.google.com/presentation/d/1M1HvHv_bxX_lxsD_2F-szVOxmjAgJyjjMpXrVzTwnig/edit?slide=id.g9eef0a043f_0_4#slide=id.g9eef0a043f_0_4' }
+        ],
+        image: '/images/finger-drawing.png'
+      },
+      {
+        title: 'Unified AI Platform',
+        description: 'A unified interface deployed on laboratory servers that aggregates access to Claude, Gemini, and ChatGPT. Enables seamless model comparison and utilization for research purposes.',
+        tags: ['Python', 'LLM', 'React'],
+        status: 'Internal',
+        category: 'Research'
       }
     ],
 
@@ -269,25 +279,35 @@ export const translations = {
     // Projects
     projects: [
       {
-        title: 'Passkey認証システム',
-        description: 'MoneyForwardにてPasskey技術を用いた現代的なパスワードレス認証を実装し、セキュリティとユーザーエクスペリエンスを向上させました。',
-        tags: ['Ruby on Rails', 'Passkey', '認証'],
-        status: '稼働中',
-        category: '実務'
+        title: 'Ketchup',
+        description: '現在、最も情熱を注いで開発しているプロジェクトです。東北大学学生プロジェクトに採択されたタスク管理プラットフォームとして、実用性とユーザー体験を追求し、日々精力的に開発を進めています。アプリは公開中です。',
+        tags: ['TypeScript', 'React', 'PostgreSQL'],
+        status: '活発に開発中',
+        category: '学業',
+        links: [
+          { label: 'アプリ', url: 'https://ketch-up.net' },
+          { label: 'ニュース', url: 'https://www.is.tohoku.ac.jp/jp/news/information/detail---id-5563.html' }
+        ],
+        image: '/images/ketchup.png',
+        imagePosition: 'top'
       },
       {
-        title: 'タスク管理アプリケーション',
-        description: '東北大学学生プロジェクトの一環として、チームコラボレーションと生産性に焦点を当てた包括的なタスク管理システムを開発しました。',
-        tags: ['Go', 'React', 'PostgreSQL'],
-        status: '開発中',
-        category: '学業'
-      },
-      {
-        title: 'JPHACK 2023 受賞作品',
-        description: '日本最大級のハッカソンJPHACK 2023にてJ-Stream賞を受賞した革新的なソリューションを開発しました。',
-        tags: ['ハッカソン', 'イノベーション', 'チームプロジェクト'],
+        title: 'Finger Drawing',
+        description: '指先の動きだけでデジタル描画を可能にする革新的なクリエイティブツール。コンピュータビジョン技術を用いて手のジェスチャーを認識し、画面に触れることなく直感的な描画体験を実現します。',
+        tags: ['Python', 'OpenCV', 'Hackathon'],
         status: '完了',
-        category: 'ハッカソン'
+        category: 'ハッカソン',
+        links: [
+          { label: 'スライドを見る', url: 'https://docs.google.com/presentation/d/1M1HvHv_bxX_lxsD_2F-szVOxmjAgJyjjMpXrVzTwnig/edit?slide=id.g9eef0a043f_0_4#slide=id.g9eef0a043f_0_4' }
+        ],
+        image: '/images/finger-drawing.png'
+      },
+      {
+        title: 'Unified AI Platform',
+        description: '研究室のサーバー上に構築した、Claude・Gemini・ChatGPTを一元管理する統合AIプラットフォーム。複数のLLMをシームレスに利用・比較できる環境を実現しました。',
+        tags: ['Python', 'LLM', 'React'],
+        status: '研究室内運用',
+        category: '研究'
       }
     ],
 

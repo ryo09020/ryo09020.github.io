@@ -351,6 +351,16 @@ const Home = () => {
                                         </span>
                                     </div>
                                 </div>
+                                {project.image && (
+                                    <div className="home__project-image-container">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="home__project-image"
+                                            style={{ objectPosition: project.imagePosition || 'center' }}
+                                        />
+                                    </div>
+                                )}
                                 <h3 className="home__project-title">{project.title}</h3>
                                 <p className="home__project-description">{project.description}</p>
                                 <div className="home__project-tags">
@@ -358,12 +368,25 @@ const Home = () => {
                                         <span key={tag} className="home__project-tag">{tag}</span>
                                     ))}
                                 </div>
-                                <button className="home__project-link">
-                                    {t('viewProject')}
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </button>
+                                <div className="home__project-links">
+                                    {project.links && project.links.map((link, i) => (
+                                        <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
+                                            {link.label}
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </a>
+                                    ))}
+                                    {/* Fallback for single link if any exist in other entries not updated (safety) */}
+                                    {project.link && !project.links && (
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="home__project-link">
+                                            {t('viewProject')}
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </a>
+                                    )}
+                                </div>
                             </motion.article>
                         ))}
                     </div>
