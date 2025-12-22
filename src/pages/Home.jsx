@@ -345,9 +345,9 @@ const Home = () => {
                                 <div className="home__project-header">
                                     <span className="home__project-number">{String(index + 1).padStart(2, '0')}</span>
                                     <div className="home__project-meta">
-                                        <span className="home__project-year">2024</span>
-                                        <span className={`home__project-status home__project-status--${project.status.toLowerCase()}`}>
-                                            {t(project.status.toLowerCase())}
+                                        <span className={`home__project-category`}>{project.category}</span>
+                                        <span className={`home__project-status home__project-status--${project.type}`}>
+                                            {project.status}
                                         </span>
                                     </div>
                                 </div>

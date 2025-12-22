@@ -397,21 +397,84 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
-  &__project-status {
-    padding: $space-xs $space-sm;
-    border-radius: 6px;
+  &__project-category {
+    padding: 6px 12px;
+    border-radius: 100px;
     font-size: $text-xs;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: $c-gray-100;
+    color: $c-gray-600;
+    border: 1px solid $c-gray-200;
+  }
 
-    &--live {
-      background-color: #d1fae5;
-      color: #065f46;
+  &__project-status {
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: $text-xs;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
     }
 
-    &--development {
-      background-color: #fef3c7;
-      color: #92400e;
+    &--active {
+      background-color: #ecfccb; // Lime 100
+      color: #3f6212; // Lime 800
+      border: 1px solid #d9f99d;
+
+      &::before {
+        background-color: #65a30d; // Lime 600
+        box-shadow: 0 0 0 2px rgba(101, 163, 13, 0.2);
+        animation: pulse-dot 2s infinite;
+      }
+    }
+
+    &--completed {
+      background-color: #e0f2fe; // Sky 100
+      color: #0369a1; // Sky 700
+      border: 1px solid #bae6fd;
+
+      &::before {
+        background-color: #0284c7; // Sky 600
+      }
+    }
+
+    &--internal {
+      background-color: #f3e8ff; // Purple 100
+      color: #6b21a8; // Purple 800
+      border: 1px solid #e9d5ff;
+
+      &::before {
+        background-color: #9333ea; // Purple 600
+      }
+    }
+  }
+
+  @keyframes pulse-dot {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    50% {
+      transform: scale(1.5);
+      opacity: 0.6;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -453,12 +516,22 @@
   }
 
   &__project-tag {
-    padding: $space-xs $space-md;
-    background-color: $c-gray-100;
-    border-radius: 6px;
-    font-size: $text-sm;
-    color: $c-gray-700;
-    font-weight: 500;
+    padding: 6px 14px;
+    background-color: $c-white;
+    border: 1px solid $c-gray-200;
+    border-radius: 100px;
+    font-size: $text-xs;
+    color: $c-gray-600;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: $c-accent;
+      color: $c-accent;
+      background-color: rgba($c-accent, 0.05);
+      transform: translateY(-1px);
+    }
   }
 
   &__project-links {

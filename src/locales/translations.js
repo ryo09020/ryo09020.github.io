@@ -44,6 +44,7 @@ export const translations = {
         description: 'A comprehensive task management platform adopted by the Tohoku University Student Project. I am energetically developing this to solve real-world productivity challenges, iterating daily based on user feedback. The app is publicly available.',
         tags: ['TypeScript', 'React', 'PostgreSQL'],
         status: 'Active Development',
+        type: 'active',
         category: 'Academic',
         links: [
           { label: 'App', url: 'https://ketch-up.net' },
@@ -57,6 +58,7 @@ export const translations = {
         description: 'An innovative creative tool that allows users to draw digitally using only their fingers in the air. By tracking hand gestures with computer vision, it enables a touchless and intuitive drawing experience.',
         tags: ['Python', 'OpenCV', 'Hackathon'],
         status: 'Completed',
+        type: 'completed',
         category: 'Hackathon',
         links: [
           { label: 'View Slides', url: 'https://docs.google.com/presentation/d/1M1HvHv_bxX_lxsD_2F-szVOxmjAgJyjjMpXrVzTwnig/edit?slide=id.g9eef0a043f_0_4#slide=id.g9eef0a043f_0_4' }
@@ -64,11 +66,15 @@ export const translations = {
         image: '/images/finger-drawing.png'
       },
       {
-        title: 'Unified AI Platform',
+        title: 'GAIS, Unified AI Platform',
         description: 'A unified interface deployed on laboratory servers that aggregates access to Claude, Gemini, and ChatGPT. Enables seamless model comparison and utilization for research purposes.',
         tags: ['Python', 'LLM', 'React'],
         status: 'Internal',
-        category: 'Research'
+        type: 'internal',
+        category: 'Research',
+        links: [
+          { label: 'App', url: 'https://gais.sb.ecei.tohoku.ac.jp/' }
+        ]
       }
     ],
 
@@ -283,6 +289,7 @@ export const translations = {
         description: '現在、最も情熱を注いで開発しているプロジェクトです。東北大学学生プロジェクトに採択されたタスク管理プラットフォームとして、実用性とユーザー体験を追求し、日々精力的に開発を進めています。アプリは公開中です。',
         tags: ['TypeScript', 'React', 'PostgreSQL'],
         status: '活発に開発中',
+        type: 'active',
         category: '学業',
         links: [
           { label: 'アプリ', url: 'https://ketch-up.net' },
@@ -296,6 +303,7 @@ export const translations = {
         description: '指先の動きだけでデジタル描画を可能にする革新的なクリエイティブツール。コンピュータビジョン技術を用いて手のジェスチャーを認識し、画面に触れることなく直感的な描画体験を実現します。',
         tags: ['Python', 'OpenCV', 'Hackathon'],
         status: '完了',
+        type: 'completed',
         category: 'ハッカソン',
         links: [
           { label: 'スライドを見る', url: 'https://docs.google.com/presentation/d/1M1HvHv_bxX_lxsD_2F-szVOxmjAgJyjjMpXrVzTwnig/edit?slide=id.g9eef0a043f_0_4#slide=id.g9eef0a043f_0_4' }
@@ -303,11 +311,15 @@ export const translations = {
         image: '/images/finger-drawing.png'
       },
       {
-        title: 'Unified AI Platform',
+        title: 'GAIS, Unified AI Platform',
         description: '研究室のサーバー上に構築した、Claude・Gemini・ChatGPTを一元管理する統合AIプラットフォーム。複数のLLMをシームレスに利用・比較できる環境を実現しました。',
         tags: ['Python', 'LLM', 'React'],
         status: '研究室内運用',
-        category: '研究'
+        type: 'internal',
+        category: '研究',
+        links: [
+          { label: 'アプリ', url: 'https://gais.sb.ecei.tohoku.ac.jp/' }
+        ]
       }
     ],
 
