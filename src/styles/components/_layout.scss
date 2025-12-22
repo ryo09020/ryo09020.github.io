@@ -10,8 +10,8 @@
   }
 
   &__footer {
-    background-color: $c-gray-900;
-    color: $c-white;
+    background-color: var(--c-bg-tertiary);
+    color: var(--c-text-primary);
     padding: $space-4xl $space-lg $space-2xl;
 
     @media (max-width: $bp-tablet) {
@@ -45,13 +45,13 @@
     &-title {
       font-size: $text-2xl;
       font-weight: 800;
-      color: $c-white;
+      color: var(--c-text-primary);
       margin-bottom: $space-sm;
     }
 
     &-description {
       font-size: $text-base;
-      color: $c-gray-400;
+      color: var(--c-text-secondary);
       line-height: 1.6;
     }
 
@@ -74,7 +74,7 @@
       &-title {
         font-size: $text-sm;
         font-weight: 700;
-        color: $c-white;
+        color: var(--c-text-primary);
         text-transform: uppercase;
         letter-spacing: 0.1em;
         margin-bottom: $space-sm;
@@ -102,17 +102,17 @@
 
     &-link {
       font-size: $text-base;
-      color: $c-gray-400;
+      color: var(--c-text-secondary);
       transition: color 0.3s $ease-out-expo, transform 0.3s $ease-out-expo;
 
       &:hover {
-        color: $c-white;
+        color: var(--c-text-primary);
       }
     }
 
     &-text {
       font-size: $text-base;
-      color: $c-gray-500;
+      color: var(--c-text-tertiary);
     }
 
     &-bottom {
@@ -120,7 +120,7 @@
       justify-content: space-between;
       align-items: center;
       padding-top: $space-xl;
-      border-top: 1px solid $c-gray-700;
+      border-top: 1px solid var(--c-border-primary);
 
       @media (max-width: $bp-mobile) {
         flex-direction: column;
@@ -131,12 +131,12 @@
 
     &-copyright {
       font-size: $text-sm;
-      color: $c-gray-500;
+      color: var(--c-text-tertiary);
     }
 
     &-made {
       font-size: $text-sm;
-      color: $c-gray-500;
+      color: var(--c-text-tertiary);
     }
   }
 }

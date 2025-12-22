@@ -7,23 +7,75 @@ $bp-tablet: 768px;
 $bp-desktop: 1024px;
 $bp-wide: 1440px;
 
-// Colors - Minimal & Modern
-$c-black: #0a0a0a;
-$c-white: #ffffff;
-$c-gray-100: #f8f9fa;
-$c-gray-200: #e9ecef;
-$c-gray-300: #dee2e6;
-$c-gray-400: #ced4da;
-$c-gray-500: #adb5bd;
-$c-gray-600: #6c757d;
-$c-gray-700: #495057;
-$c-gray-800: #343a40;
-$c-gray-900: #212529;
+// CSS Variables for Theming
+:root {
+    // Colors - Light Mode (Default)
+    --c-bg-primary: #ffffff;
+    --c-bg-primary-rgb: 255, 255, 255;
+    --c-bg-secondary: #f8f9fa;
+    --c-bg-secondary-rgb: 248, 249, 250;
+    --c-bg-tertiary: #e9ecef;
 
-// Accent Colors
-$c-accent: #6366f1;
-$c-accent-light: #a5b4fc;
-$c-accent-dark: #4338ca;
+    --c-text-primary: #0a0a0a;
+    --c-text-primary-rgb: 10, 10, 10;
+    --c-text-secondary: #6c757d;
+    --c-text-tertiary: #adb5bd;
+
+    --c-border-primary: #e9ecef;
+    --c-border-secondary: #dee2e6;
+
+    --c-accent: #6366f1;
+    --c-accent-light: #a5b4fc;
+    --c-accent-dark: #4338ca;
+    --c-accent-rgb: 99, 102, 241; // For rgba usage
+
+    --c-shadow: rgba(0, 0, 0, 0.1);
+    --c-shadow-strong: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] {
+    // Colors - Dark Mode
+    --c-bg-primary: #0a0a0a;
+    --c-bg-primary-rgb: 10, 10, 10;
+    --c-bg-secondary: #171717;
+    --c-bg-secondary-rgb: 23, 23, 23;
+    --c-bg-tertiary: #262626;
+
+    --c-text-primary: #f5f5f5;
+    --c-text-primary-rgb: 245, 245, 245;
+    --c-text-secondary: #a3a3a3;
+    --c-text-tertiary: #525252;
+
+    --c-border-primary: #262626;
+    --c-border-secondary: #404040;
+
+    --c-accent: #818cf8; // Lighter for contrast
+    --c-accent-light: #6366f1;
+    --c-accent-dark: #a5b4fc;
+    --c-accent-rgb: 129, 140, 248;
+
+    --c-shadow: rgba(0, 0, 0, 0.5);
+    --c-shadow-strong: rgba(0, 0, 0, 0.8);
+}
+
+// SCSS Variables Map to CSS Variables
+// We keep the old names to minimize refactor, mapping them to the semantic CSS vars
+$c-black: var(--c-text-primary); // Using as primary text color
+$c-white: var(--c-bg-primary); // Using as primary background
+$c-gray-100: var(--c-bg-secondary);
+$c-gray-200: var(--c-border-primary);
+$c-gray-300: var(--c-border-secondary);
+$c-gray-400: var(--c-text-tertiary);
+$c-gray-500: #6b7280; // Keep fixed for neutral grays if needed, or map
+$c-gray-600: var(--c-text-secondary);
+$c-gray-700: #374151;
+$c-gray-800: #1f2937;
+$c-gray-900: #111827;
+
+$c-accent: var(--c-accent);
+$c-accent-light: var(--c-accent-light);
+$c-accent-dark: var(--c-accent-dark);
+$c-accent-rgb: var(--c-accent-rgb);
 
 // Spacing Scale
 $space-xs: 0.25rem;

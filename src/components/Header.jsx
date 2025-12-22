@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
 
+import ThemeToggle from './ThemeToggle';
+
 const Header = () => {
     const { language, toggleLanguage } = useLanguage();
     const { t } = useTranslation();
@@ -81,6 +83,7 @@ const Header = () => {
 
                 {/* Actions */}
                 <div className="header__actions">
+                    <ThemeToggle />
                     <button
                         onClick={toggleLanguage}
                         className="header__lang-btn"

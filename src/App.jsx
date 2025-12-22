@@ -5,18 +5,22 @@ import Home from './pages/Home';
 
 import { LanguageProvider } from './context/LanguageContext';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 function App() {
   return (
-    <LanguageProvider>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="*" element={<Home />} />
-          </Route>
-        </Routes>
-      </HashRouter>
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="*" element={<Home />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
