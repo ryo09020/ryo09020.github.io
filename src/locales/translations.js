@@ -120,7 +120,21 @@ export const translations = {
     skillsTechnologies: 'Skills & Technologies',
     education: 'Education',
     beyondCode: 'Beyond Development',
-    personalText1: 'When I\'m not coding or studying, I enjoy participating in hackathons, exploring new technologies, and contributing to open-source projects. I believe in continuous learning and staying at the forefront of technological innovation.',
+    personalText1: 'When I\'m not coding, I practice Kyudo (Japanese Archery) which I started in middle school, and enjoy reading. I also love exploring new technologies and contributing to open-source projects.',
+    personalProfile: {
+      name: 'Ryo',
+      age: '24',
+      location: 'Sendai, Japan',
+      interests: 'Kyudo (Archery), Reading, Photography, Traveling',
+      education: 'Tohoku Univ. (Master)'
+    },
+    profileLabels: {
+      name: 'Name',
+      age: 'Age',
+      location: 'Location',
+      interests: 'Interests',
+      education: 'Education'
+    },
 
 
     // Experience Data
@@ -365,7 +379,28 @@ export const translations = {
     skillsTechnologies: 'スキル・技術',
     education: '学歴',
     beyondCode: '開発以外の活動',
-    personalText1: 'コーディングや勉強をしていない時は、ハッカソンへの参加、新しい技術の探求、オープンソースプロジェクトへの貢献を楽しんでいます。継続的な学習と技術革新の最前線に立つことを信条としています。',
+    personalText1: 'コーディングや勉強をしていない時は、中学時代から続けている弓道や読書に没頭したり、新しい技術の探求を楽しんだりしています。技術革新の最前線に立ち続けることを大切にしています。',
+    personalProfile: {
+      name: 'Ryo',
+      age: '24',
+      location: '宮城県 仙台市',
+      interests: '弓道 (中学〜), 読書, 写真, 旅行',
+      education: '東北大学大学院 情報科学研究科'
+    },
+    profileLabels: {
+      name: 'Name',
+      age: 'Age',
+      location: 'Location', // Keep english or katakana? Usually English headers look cool. But let's use JP for consistency if requested. User said "profile info... age etc". Let's use English keys for style or JP? 
+      // User's site has "Work", "About" in English in URL but text is JP.
+      // Looking at `yearsExperience` -> '年の経験'.
+      // I will use English labels for the "Label" part to make it look "techy/modern" as requested (Design Aesthetics).
+      // Actually, let's stick to English labels for keys as they look like data keys.
+      name: 'Name',
+      age: 'Age',
+      location: 'Location',
+      interests: 'Interests',
+      education: 'Education'
+    },
 
 
     // Experience Data

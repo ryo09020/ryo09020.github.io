@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { SiRubyonrails, SiGo, SiReact, SiTypescript, SiPostgresql, SiMysql, SiPython, SiR, SiDocker, SiTerraform, SiTensorflow } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
@@ -255,12 +256,35 @@ const Home = () => {
                         className="home__personal-content"
                     >
                         <h2 className="home__section-title">{t('beyondCode')}</h2>
-                        <div className="home__personal-image-container">
-                            <img src="/images/pixar.jpg" alt="Personal" className="home__personal-image" />
+
+                        <div className="home__personal-body">
+                            <div className="home__personal-visual">
+                                <div className="home__personal-image-container">
+                                    <img src="/images/pixar.jpg" alt="Personal" className="home__personal-image" />
+                                </div>
+                            </div>
+
+                            <div className="home__personal-info">
+                                <div className="home__personal-profile">
+                                    {[
+                                        { key: 'name', label: t('profileLabels').name, value: t('personalProfile').name },
+                                        { key: 'age', label: t('profileLabels').age, value: t('personalProfile').age },
+                                        { key: 'location', label: t('profileLabels').location, value: t('personalProfile').location },
+                                        { key: 'education', label: t('profileLabels').education, value: t('personalProfile').education },
+                                        { key: 'interests', label: t('profileLabels').interests, value: t('personalProfile').interests }
+                                    ].map(item => (
+                                        <React.Fragment key={item.key}>
+                                            <div className="home__personal-label">{item.label}</div>
+                                            <div className="home__personal-value">{item.value}</div>
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+
+                                <p className="home__personal-text">
+                                    {t('personalText1')}
+                                </p>
+                            </div>
                         </div>
-                        <p className="home__personal-text">
-                            {t('personalText1')}
-                        </p>
                     </motion.div>
                 </div>
             </section>

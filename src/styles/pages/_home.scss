@@ -977,25 +977,49 @@
   &__personal {
     padding: $space-4xl 0;
     background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    overflow: hidden; // Prevent overflow from rotated elements
 
     @media (max-width: $bp-tablet) {
       padding: $space-3xl 0;
     }
 
     &-content {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      text-align: center;
+    }
+
+    &-body {
+      display: flex;
+      align-items: center;
+      gap: $space-4xl;
+      margin-top: $space-xl;
+
+      @media (max-width: $bp-tablet) {
+        flex-direction: column;
+        gap: $space-2xl;
+        text-align: center;
+      }
+    }
+
+    &-visual {
+      flex-shrink: 0;
+      width: 380px;
+      position: relative;
+
+      @media (max-width: $bp-mobile) {
+        width: 100%;
+        max-width: 320px;
+      }
     }
 
     &-image-container {
-      margin: $space-xl auto;
-      max-width: 400px;
+      width: 100%;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      transform: rotate(-2deg);
-      transition: all 0.3s $ease-out-expo;
+      transform: rotate(-3deg);
+      transition: all 0.5s $ease-out-expo;
+      border: 8px solid $c-white;
 
       &:hover {
         transform: rotate(0) scale(1.02);
@@ -1008,15 +1032,63 @@
       display: block;
     }
 
+    &-info {
+      flex-grow: 1;
+    }
+
     &-text {
       font-size: $text-lg;
       line-height: 1.8;
       color: $c-gray-600;
-      margin-bottom: $space-lg;
+      margin-top: $space-xl;
+    }
 
-      &:last-child {
-        margin-bottom: 0;
+    &-profile {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: $space-md $space-2xl;
+      background-color: $c-white;
+      padding: $space-xl;
+      border-radius: 16px;
+      border: 1px solid $c-gray-200;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+
+      @media (max-width: $bp-tablet) {
+        text-align: left;
+        display: inline-grid; // Centered in parent but grid internal
+        width: 100%;
+        max-width: 500px;
       }
+
+      @media (max-width: $bp-mobile) {
+        grid-template-columns: 1fr;
+        gap: $space-xs;
+      }
+    }
+
+    &-label {
+      font-size: $text-sm;
+      font-weight: 700;
+      color: $c-accent;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: ':';
+        margin-left: 2px;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
+      }
+    }
+
+    &-value {
+      font-size: $text-base;
+      color: $c-black;
+      font-weight: 500;
     }
   }
 }
