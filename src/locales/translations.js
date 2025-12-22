@@ -22,14 +22,19 @@ export const translations = {
 
     // Skills
     skills: [
-      'Ruby on Rails',
-      'Go Programming',
-      'React & TypeScript',
-      'AWS Cloud Services',
-      'Database Design',
-      'API Development',
-      'System Architecture',
-      'Agile Development'
+      { key: 'rails', name: 'Ruby on Rails' },
+      { key: 'go', name: 'Golang' },
+      { key: 'react', name: 'React' },
+      { key: 'typescript', name: 'TypeScript' },
+      { key: 'aws', name: 'AWS' },
+      { key: 'postgresql', name: 'PostgreSQL' },
+      { key: 'mysql', name: 'MySQL' },
+      { key: 'python', name: 'Python' },
+      { key: 'r', name: 'R' },
+      { key: 'grpc', name: 'gRPC' },
+      { key: 'docker', name: 'Docker' },
+      { key: 'terraform', name: 'Terraform' },
+      { key: 'tensorflow', name: 'TensorFlow' }
     ],
 
     // Projects
@@ -109,8 +114,8 @@ export const translations = {
         role: 'Graduate Student',
         company: 'Tohoku University - Graduate School of Information Sciences',
         year: '2024 - Present (Expected 2026)',
-        description: 'Pursuing Master\'s degree in Information Science. Leading student project for task management application development. Conducting research in software engineering and system design.',
-        technologies: ['Research', 'Go', 'System Design', 'Project Management']
+        description: 'Pursuing Master\'s degree in Information Science. Conducting research on the relationship between psychological traits and dementia. Also leading a student project for task management application development.',
+        technologies: ['Dementia Research', 'Data Analysis', 'System Design', 'Project Management']
       },
       {
         role: 'Bachelor of Engineering',
@@ -123,14 +128,14 @@ export const translations = {
 
     professionalExp: [
       {
-        role: 'Software Engineer',
+        role: 'Software Engineer Intern',
         company: 'MoneyForward Inc.',
         year: '2025 - Present',
         description: 'Implementing Passkey authentication system using Ruby on Rails. Working on security enhancements and modern authentication solutions for financial technology platform.',
         technologies: ['Ruby on Rails', 'Passkey', 'Authentication', 'Security']
       },
       {
-        role: 'Software Engineer',
+        role: 'Software Engineer Intern',
         company: 'Showcase Gig Inc.',
         year: '2024 - 2025',
         description: 'Developed web applications using Go programming language. Gained experience in backend development, API design, and cloud infrastructure management.',
@@ -150,15 +155,15 @@ export const translations = {
         role: 'Study Abroad Student',
         company: 'University at Albany, SUNY',
         year: 'February - March 2025',
-        description: 'Short-term study abroad program focusing on international perspectives in computer science and cross-cultural collaboration in software development.',
-        technologies: ['International Experience', 'Cross-cultural Communication', 'Global Perspective']
+        description: 'Short-term language study abroad program. Focused on improving English communication skills and experiencing cross-cultural exchange through the Intensive English Language Institute.',
+        technologies: ['English Communication', 'Cross-cultural Exchange', 'Language Learning']
       },
       {
         role: 'Hackathon Winner',
         company: 'JPHACK 2023',
         year: 'November 2023',
         description: 'Won J-Stream Award at JPHACK 2023, one of Japan\'s largest hackathons. Developed innovative solution within 24-hour timeframe with team collaboration.',
-        technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping']
+        technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping'],
       }
     ],
 
@@ -246,14 +251,19 @@ export const translations = {
 
     // Skills
     skills: [
-      'Ruby on Rails',
-      'Go言語',
-      'React & TypeScript',
-      'AWSクラウドサービス',
-      'データベース設計',
-      'API開発',
-      'システム設計',
-      'アジャイル開発'
+      { key: 'rails', name: 'Ruby on Rails' },
+      { key: 'go', name: 'Golang' },
+      { key: 'react', name: 'React' },
+      { key: 'typescript', name: 'TypeScript' },
+      { key: 'aws', name: 'AWS' },
+      { key: 'postgresql', name: 'PostgreSQL' },
+      { key: 'mysql', name: 'MySQL' },
+      { key: 'python', name: 'Python' },
+      { key: 'r', name: 'R' },
+      { key: 'grpc', name: 'gRPC' },
+      { key: 'docker', name: 'Docker' },
+      { key: 'terraform', name: 'Terraform' },
+      { key: 'tensorflow', name: 'TensorFlow' }
     ],
 
     // Projects
@@ -334,8 +344,8 @@ export const translations = {
         role: '大学院生',
         company: '東北大学大学院情報科学研究科',
         year: '2024年 - 現在（2026年修了予定）',
-        description: '情報科学の修士課程を履修中。タスク管理アプリケーション開発の学生プロジェクトをリード。ソフトウェア工学とシステム設計の研究を実施。',
-        technologies: ['研究', 'Go', 'システム設計', 'プロジェクト管理']
+        description: '情報科学の修士課程を履修中。認知症と心理的特徴の関係性についての研究に従事。タスク管理アプリケーション開発の学生プロジェクトもリードしている。',
+        technologies: ['認知症研究', 'データ分析', 'システム設計', 'プロジェクト管理']
       },
       {
         role: '工学学士',
@@ -375,15 +385,17 @@ export const translations = {
         role: '交換留学生',
         company: 'ニューヨーク州立大学オルバニー校',
         year: '2025年2月 - 3月',
-        description: 'コンピュータサイエンスの国際的視点とソフトウェア開発における異文化間コラボレーションに焦点を当てた短期留学プログラム。',
-        technologies: ['国際経験', '異文化コミュニケーション', 'グローバル視点']
+        description: '語学学習を目的とした短期留学プログラム。集中英語講座（IELI）を通じて、英語コミュニケーション能力の向上と異文化交流に注力。',
+        technologies: ['英語コミュニケーション', '異文化交流', '語学学習'],
+        image: '/images/flowers.jpg'
       },
       {
         role: 'ハッカソン受賞者',
         company: 'JPHACK 2023',
         year: '2023年11月',
         description: '日本最大級のハッカソンJPHACK 2023にてJ-Stream賞を受賞。24時間という制限時間内でチームコラボレーションにより革新的なソリューションを開発。',
-        technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング']
+        technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング'],
+        image: '/images/night.jpg'
       }
     ],
 

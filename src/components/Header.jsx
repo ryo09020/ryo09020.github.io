@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
@@ -26,13 +26,34 @@ const Header = () => {
     }, [location]);
 
     const navItems = [
-        { path: '/', label: t('home') },
-        { path: '/profile', label: t('about') },
-        { path: '/blog', label: t('work') },
+        { path: '#home', label: t('home') },
+        { path: '#about', label: t('about') },
+        { path: '#work', label: t('work') },
     ];
 
+    const handleNavClick = (e, path) => {
+        e.preventDefault();
+        setIsMenuOpen(false); // Close menu first
+
+        setTimeout(() => {
+            const element = document.querySelector(path);
+            if (element) {
+                const offset = 80; // Header height
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    };
+
     return (
-        <motion.header 
+        <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -40,22 +61,21 @@ const Header = () => {
         >
             <div className="header__container">
                 {/* Logo */}
-                <NavLink to="/" className="header__logo">
+                <a href="#home" className="header__logo" onClick={(e) => handleNavClick(e, '#home')}>
                     <span className="header__logo-text">Ryo</span>
-                </NavLink>
+                </a>
 
                 {/* Desktop Navigation */}
                 <nav className="header__nav">
                     {navItems.map((item) => (
-                        <NavLink
+                        <a
                             key={item.path}
-                            to={item.path}
-                            className={({ isActive }) => 
-                                `header__nav-link ${isActive ? 'header__nav-link--active' : ''}`
-                            }
+                            href={item.path}
+                            className="header__nav-link"
+                            onClick={(e) => handleNavClick(e, item.path)}
                         >
                             {item.label}
-                        </NavLink>
+                        </a>
                     ))}
                 </nav>
 
@@ -66,20 +86,20 @@ const Header = () => {
                         className="header__lang-btn"
                         aria-label={`Switch to ${language === 'en' ? 'Japanese' : 'English'}`}
                     >
-                        <svg 
-                            className="header__lang-icon" 
-                            width="16" 
-                            height="16" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            strokeWidth="1.5" 
-                            strokeLinecap="round" 
+                        <svg
+                            className="header__lang-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                         >
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                         <span className="header__lang-text">
                             {language === 'en' ? 'EN' : 'JP'}
@@ -117,14 +137,13 @@ const Header = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1, duration: 0.3 }}
                                 >
-                                    <NavLink
-                                        to={item.path}
-                                        className={({ isActive }) => 
-                                            `header__mobile-link ${isActive ? 'header__mobile-link--active' : ''}`
-                                        }
+                                    <a
+                                        href={item.path}
+                                        className="header__mobile-link"
+                                        onClick={(e) => handleNavClick(e, item.path)}
                                     >
                                         {item.label}
-                                    </NavLink>
+                                    </a>
                                 </motion.div>
                             ))}
                         </nav>

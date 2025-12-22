@@ -38,12 +38,24 @@
     color: $c-black;
     transition: color 0.3s $ease-out-expo;
 
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+
     &:hover {
       color: $c-accent;
     }
 
     &-text {
       display: block;
+    }
+
+    &-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $c-gray-200;
     }
   }
 
