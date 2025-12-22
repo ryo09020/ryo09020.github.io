@@ -120,12 +120,12 @@ export const translations = {
     skillsTechnologies: 'Skills & Technologies',
     education: 'Education',
     beyondCode: 'Beyond Development',
-    personalText1: 'When I\'m not coding, I practice Kyudo (Japanese Archery) which I started in middle school, and enjoy reading. I also love exploring new technologies and contributing to open-source projects.',
+    personalText1: 'When I\'m not coding, I enjoy reading and playing video games (recently Smash Bros). I also practice Kyudo (Japanese Archery), which I have been doing since middle school. I love exploring new technologies and contributing to open-source projects.',
     personalProfile: {
       name: 'Ryo',
       age: '24',
       location: 'Sendai, Japan',
-      interests: 'Kyudo (Archery), Reading, Photography, Traveling',
+      interests: 'Reading, Video Games, Kyudo (Archery), Photography, Traveling',
       education: 'Tohoku Univ. (Master)'
     },
     profileLabels: {
@@ -379,12 +379,12 @@ export const translations = {
     skillsTechnologies: 'スキル・技術',
     education: '学歴',
     beyondCode: '開発以外の活動',
-    personalText1: 'コーディングや勉強をしていない時は、中学時代から続けている弓道や読書に没頭したり、新しい技術の探求を楽しんだりしています。技術革新の最前線に立ち続けることを大切にしています。',
+    personalText1: 'コーディングや勉強をしていない時は、読書やゲーム（最近はスマブラ）を楽しんでいます。また、中学時代から続けている弓道も行っています。技術革新の最前線に立ち続けることを大切にしています。',
     personalProfile: {
       name: 'Ryo',
       age: '24',
       location: '宮城県 仙台市',
-      interests: '弓道 (中学〜), 読書, 写真, 旅行',
+      interests: '読書, ゲーム, 弓道 (中学〜), 写真, 旅行',
       education: '東北大学大学院 情報科学研究科'
     },
     profileLabels: {
