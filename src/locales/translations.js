@@ -295,7 +295,6 @@ export const translations = {
           { label: 'ニュース', url: 'https://www.is.tohoku.ac.jp/jp/news/information/detail---id-5563.html' }
         ],
         image: '/images/ketchup.png',
-        imagePosition: 'top'
       },
       {
         title: 'Finger Drawing',
