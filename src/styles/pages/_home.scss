@@ -776,6 +776,18 @@
     @media (max-width: $bp-tablet) {
       padding: $space-3xl 0;
     }
+
+    &--academic {
+      background-color: rgba(59, 130, 246, 0.04); // Blue tint
+    }
+
+    &--professional {
+      background-color: rgba(16, 185, 129, 0.04); // Emerald tint
+    }
+
+    &--extracurricular {
+      background-color: rgba(139, 92, 246, 0.04); // Purple tint
+    }
   }
 
   &__timeline {

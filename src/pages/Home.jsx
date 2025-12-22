@@ -112,7 +112,7 @@ const Home = () => {
             </section>
 
             {/* Journey / Experience Section */}
-            <section className="home__experience">
+            <section className="home__experience home__experience--academic">
                 <div className="home__container">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -156,7 +156,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="home__experience">
+            <section className="home__experience home__experience--professional">
                 <div className="home__container">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -200,7 +200,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="home__experience">
+            <section className="home__experience home__experience--extracurricular">
                 <div className="home__container">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
