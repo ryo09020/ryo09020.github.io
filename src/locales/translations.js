@@ -386,16 +386,14 @@ export const translations = {
         company: 'ニューヨーク州立大学オルバニー校',
         year: '2025年2月 - 3月',
         description: '語学学習を目的とした短期留学プログラム。集中英語講座（IELI）を通じて、英語コミュニケーション能力の向上と異文化交流に注力。',
-        technologies: ['英語コミュニケーション', '異文化交流', '語学学習'],
-        image: '/images/flowers.jpg'
+        technologies: ['英語コミュニケーション', '異文化交流', '語学学習']
       },
       {
         role: 'ハッカソン受賞者',
         company: 'JPHACK 2023',
         year: '2023年11月',
         description: '日本最大級のハッカソンJPHACK 2023にてJ-Stream賞を受賞。24時間という制限時間内でチームコラボレーションにより革新的なソリューションを開発。',
-        technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング'],
-        image: '/images/night.jpg'
+        technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング']
       }
     ],
 
