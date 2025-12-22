@@ -130,40 +130,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Contact Section */}
-            <section className="home__contact">
-                <div className="home__contact-container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="home__contact-content"
-                    >
-                        <h2 className="home__contact-title">{t('contactTitle')}</h2>
-                        <p className="home__contact-description">
-                            {t('contactDescription')}
-                        </p>
-                        <div className="home__contact-actions">
-                            <a href="mailto:hello@ryo.dev" className="home__contact-btn">
-                                {t('getInTouch')}
-                            </a>
-                            <div className="home__contact-links">
-                                <a href="https://github.com/ryo09020" target="_blank" rel="noopener noreferrer" className="home__contact-link">
-                                    GitHub
-                                </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="home__contact-link">
-                                    LinkedIn
-                                </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="home__contact-link">
-                                    Twitter
-                                </a>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
         </div>
     );
 };

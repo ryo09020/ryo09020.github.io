@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { AnimatePresence, motion } from 'framer-motion';
 import Header from './Header';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Layout = () => {
@@ -63,23 +64,20 @@ const Layout = () => {
                         <div className="layout__footer-links">
                             <div className="layout__footer-section">
                                 <h4 className="layout__footer-section-title">{t('connect')}</h4>
-                                <div className="layout__footer-link-list">
-                                    <a href="https://github.com/ryo09020" target="_blank" rel="noopener noreferrer" className="layout__footer-link">
-                                        GitHub
+                                <div className="layout__footer-link-list layout__footer-socials">
+                                    <a href="https://github.com/ryo09020" target="_blank" rel="noopener noreferrer" className="layout__footer-link" aria-label="GitHub">
+                                        <FaGithub />
                                     </a>
-                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="layout__footer-link">
-                                        LinkedIn
-                                    </a>
-                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="layout__footer-link">
-                                        Twitter
+                                    <a href="https://www.linkedin.com/in/%E4%BA%AE-%E5%A4%AA%E7%94%B0-a68540328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="layout__footer-link" aria-label="LinkedIn">
+                                        <FaLinkedin />
                                     </a>
                                 </div>
                             </div>
                             <div className="layout__footer-section">
                                 <h4 className="layout__footer-section-title">{t('contact')}</h4>
                                 <div className="layout__footer-link-list">
-                                    <a href="mailto:hello@ryo.dev" className="layout__footer-link">
-                                        hello@ryo.dev
+                                    <a href="mailto:ryo9240info@gmail.com" className="layout__footer-link">
+                                        ryo9240info@gmail.com
                                     </a>
                                     <span className="layout__footer-text">Tokyo, Japan</span>
                                 </div>
@@ -88,7 +86,7 @@ const Layout = () => {
                     </div>
                     <div className="layout__footer-bottom">
                         <span className="layout__footer-copyright">
-                            © 2024 Ryo. {t('allRightsReserved')}
+                            © 2025 Ryo. {t('allRightsReserved')}
                         </span>
                         <span className="layout__footer-made">
                             {t('madeWithLove')}

@@ -22,16 +22,16 @@ const Profile = () => {
                         </p>
                         <div className="profile__hero-stats">
                             <div className="profile__stat">
-                                <span className="profile__stat-number">4+</span>
+                                <span className="profile__stat-number">5+</span>
                                 <span className="profile__stat-label">{t('yearsExperience')}</span>
                             </div>
                             <div className="profile__stat">
-                                <span className="profile__stat-number">50+</span>
+                                <span className="profile__stat-number">15+</span>
                                 <span className="profile__stat-label">{t('projectsCompleted')}</span>
                             </div>
                             <div className="profile__stat">
-                                <span className="profile__stat-number">15+</span>
-                                <span className="profile__stat-label">{t('happyClients')}</span>
+                                <span className="profile__stat-number">1</span>
+                                <span className="profile__stat-label">{t('hackathonWins')}</span>
                             </div>
                         </div>
                     </motion.div>
@@ -49,7 +49,7 @@ const Profile = () => {
                 </div>
             </section>
 
-            {/* Experience Section */}
+            {/* Academic Experience Section */}
             <section className="profile__experience">
                 <div className="profile__container">
                     <motion.h2
@@ -59,10 +59,10 @@ const Profile = () => {
                         transition={{ duration: 0.6 }}
                         className="profile__section-title"
                     >
-                        {t('workExperience')}
+                        {t('academicExperience')}
                     </motion.h2>
                     <div className="profile__timeline">
-                        {t('experience').map((item, index) => (
+                        {t('academicExp').map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, x: -30 }}
@@ -71,7 +71,7 @@ const Profile = () => {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className="profile__timeline-item"
                             >
-                                <div className="profile__timeline-marker"></div>
+                                <div className="profile__timeline-marker profile__timeline-marker--academic"></div>
                                 <div className="profile__timeline-content">
                                     <div className="profile__timeline-header">
                                         <h3 className="profile__timeline-role">{item.role}</h3>
@@ -81,7 +81,91 @@ const Profile = () => {
                                     <p className="profile__timeline-description">{item.description}</p>
                                     <div className="profile__timeline-tech">
                                         {item.technologies.map(tech => (
-                                            <span key={tech} className="profile__tech-tag">{tech}</span>
+                                            <span key={tech} className="profile__tech-tag profile__tech-tag--academic">{tech}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Professional Experience Section */}
+            <section className="profile__experience">
+                <div className="profile__container">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="profile__section-title"
+                    >
+                        {t('professionalExperience')}
+                    </motion.h2>
+                    <div className="profile__timeline">
+                        {t('professionalExp').map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                className="profile__timeline-item"
+                            >
+                                <div className="profile__timeline-marker profile__timeline-marker--professional"></div>
+                                <div className="profile__timeline-content">
+                                    <div className="profile__timeline-header">
+                                        <h3 className="profile__timeline-role">{item.role}</h3>
+                                        <span className="profile__timeline-year">{item.year}</span>
+                                    </div>
+                                    <div className="profile__timeline-company">{item.company}</div>
+                                    <p className="profile__timeline-description">{item.description}</p>
+                                    <div className="profile__timeline-tech">
+                                        {item.technologies.map(tech => (
+                                            <span key={tech} className="profile__tech-tag profile__tech-tag--professional">{tech}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Extracurricular Activities Section */}
+            <section className="profile__experience">
+                <div className="profile__container">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="profile__section-title"
+                    >
+                        {t('extracurricularActivities')}
+                    </motion.h2>
+                    <div className="profile__timeline">
+                        {t('extracurricularExp').map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                className="profile__timeline-item"
+                            >
+                                <div className="profile__timeline-marker profile__timeline-marker--extracurricular"></div>
+                                <div className="profile__timeline-content">
+                                    <div className="profile__timeline-header">
+                                        <h3 className="profile__timeline-role">{item.role}</h3>
+                                        <span className="profile__timeline-year">{item.year}</span>
+                                    </div>
+                                    <div className="profile__timeline-company">{item.company}</div>
+                                    <p className="profile__timeline-description">{item.description}</p>
+                                    <div className="profile__timeline-tech">
+                                        {item.technologies.map(tech => (
+                                            <span key={tech} className="profile__tech-tag profile__tech-tag--extracurricular">{tech}</span>
                                         ))}
                                     </div>
                                 </div>
@@ -119,40 +203,6 @@ const Profile = () => {
                                         <span key={skill} className="profile__skill-item">{skill}</span>
                                     ))}
                                 </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Education Section */}
-            <section className="profile__education">
-                <div className="profile__container">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="profile__section-title"
-                    >
-                        {t('education')}
-                    </motion.h2>
-                    <div className="profile__education-list">
-                        {t('educationData').map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
-                                className="profile__education-item"
-                            >
-                                <div className="profile__education-header">
-                                    <h3 className="profile__education-degree">{item.degree}</h3>
-                                    <span className="profile__education-year">{item.year}</span>
-                                </div>
-                                <div className="profile__education-school">{item.school}</div>
-                                <p className="profile__education-description">{item.description}</p>
                             </motion.div>
                         ))}
                     </div>

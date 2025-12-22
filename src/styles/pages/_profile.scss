@@ -203,6 +203,24 @@
       @media (max-width: $bp-mobile) {
         left: 2px;
       }
+
+      // Academic marker - Blue
+      &--academic {
+        background-color: #3b82f6;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+      }
+
+      // Professional marker - Green
+      &--professional {
+        background-color: #10b981;
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+      }
+
+      // Extracurricular marker - Purple
+      &--extracurricular {
+        background-color: #8b5cf6;
+        box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+      }
     }
 
     &-content {
@@ -272,6 +290,27 @@
     font-size: $text-sm;
     color: $c-gray-700;
     font-weight: 500;
+
+    // Academic tags - Blue theme
+    &--academic {
+      background-color: rgba(59, 130, 246, 0.1);
+      color: #1e40af;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    // Professional tags - Green theme
+    &--professional {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: #047857;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    // Extracurricular tags - Purple theme
+    &--extracurricular {
+      background-color: rgba(139, 92, 246, 0.1);
+      color: #6d28d9;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
   }
 
   // Skills Section
