@@ -80,7 +80,7 @@ export const translations = {
     // Personality Section
     personalityTitle: 'Personality & Strengths',
     personalityConcept: 'Rational Mind, Inclusive Heart. Driving teams with logic and positivity.',
-    personalityIntro: 'My strength lies in the hybrid of "rational judgment" based on objective data analysis and "social drive" to build trust with people.',
+    personalityIntro: 'My strength lies in the hybrid of "rational judgment" based on objective data analysis and "social drive" to build trust with people. These insights are based on results from CliftonStrengths® Top 5 and FFS Theory (Human Logic Laboratory).',
     personalityPoints: [
       {
         title: 'Analytical & Rational',
@@ -324,7 +324,7 @@ export const translations = {
     // Personality Section
     personalityTitle: '性格と強み',
     personalityConcept: 'ロジカルな頭脳と、ポジティブな求心力。事実に基づいて判断し、熱意を持ってチームを動かす。',
-    personalityIntro: '私の強みは、客観的なデータ分析に基づいた「合理的な判断力」と、初対面の人とも信頼関係を築ける「社交的な推進力」を兼ね備えていることです。',
+    personalityIntro: '私の強みは、客観的なデータ分析に基づいた「合理的な判断力」と、初対面の人とも信頼関係を築ける「社交的な推進力」を兼ね備えていることです。この自己分析は、CliftonStrengths®上位資質（トップ5）およびFFS理論（Human Logic Laboratory）の診断結果に基づいています。',
     personalityPoints: [
       {
         title: 'Analytical & Rational（分析と合理性）',
