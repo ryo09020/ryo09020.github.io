@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom'; // Using HashRouter for GitHub Pages
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import BusinessCard from './pages/BusinessCard';
 
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -13,6 +14,7 @@ function App() {
       <LanguageProvider>
         <HashRouter>
           <Routes>
+            <Route path="/card" element={<BusinessCard />} />
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="*" element={<Home />} />
