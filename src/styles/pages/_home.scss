@@ -720,8 +720,8 @@
         right: -10px;
         font-size: 6rem;
         font-weight: 900;
-        color: $c-gray-200;
-        opacity: 0.3;
+        color: $c-gray-300;
+        opacity: 0.5;
         transition: all 0.5s $ease-out-expo;
         z-index: 0;
       }
@@ -779,14 +779,41 @@
 
     &--academic {
       background-color: rgba(59, 130, 246, 0.04); // Blue tint
+
+      .home__timeline-company {
+        color: #3b82f6;
+      }
+
+      .home__timeline-content:hover {
+        border-color: #3b82f6;
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+      }
     }
 
     &--professional {
       background-color: rgba(16, 185, 129, 0.04); // Emerald tint
+
+      .home__timeline-company {
+        color: #10b981;
+      }
+
+      .home__timeline-content:hover {
+        border-color: #10b981;
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+      }
     }
 
     &--extracurricular {
       background-color: rgba(139, 92, 246, 0.04); // Purple tint
+
+      .home__timeline-company {
+        color: #8b5cf6;
+      }
+
+      .home__timeline-content:hover {
+        border-color: #8b5cf6;
+        box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+      }
     }
   }
 

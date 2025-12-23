@@ -161,7 +161,7 @@ export const translations = {
         company: 'MoneyForward Inc.',
         year: '2025 - Present',
         description: 'Implementing Passkey authentication system using Ruby on Rails. Working on security enhancements and modern authentication solutions for financial technology platform.',
-        technologies: ['Ruby on Rails', 'Passkey', 'Authentication', 'Security']
+        technologies: ['Ruby on Rails', 'Passkey', 'Authentication', 'Security','Go']
       },
       {
         role: 'Software Engineer Intern',
@@ -189,9 +189,9 @@ export const translations = {
       },
       {
         role: 'Hackathon Winner',
-        company: 'JPHACK 2023',
+        company: 'JPHACKS 2023',
         year: 'November 2023',
-        description: 'Won J-Stream Award at JPHACK 2023, one of Japan\'s largest hackathons. Developed innovative solution over about a month with team collaboration.',
+        description: 'Won J-Stream Award at JPHACKS 2023, one of Japan\'s largest hackathons. Developed innovative solution over about a month with team collaboration.',
         technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping'],
       }
     ],
@@ -231,7 +231,7 @@ export const translations = {
         category: 'Development'
       },
       {
-        title: 'Lessons from JPHACK 2023',
+        title: 'Lessons from JPHACKS 2023',
         excerpt: 'Reflections on winning the J-Stream Award at Japan\'s largest hackathon and the importance of rapid prototyping.',
         category: 'Hackathon'
       },
@@ -437,7 +437,7 @@ export const translations = {
         technologies: ['Go', 'API開発', 'クラウドインフラ', 'バックエンド']
       },
       {
-        role: 'ソフトウェアエンジニアインターン',
+        role: 'ソフトウェアエンジニア',
         company: '株式会社インフラトップ',
         year: '2022年 - 2024年',
         description: 'Ruby on RailsとAWSクラウドサービスを使用したWebアプリケーションの開発。フルスタック開発とクラウドデプロイメントの実務経験を獲得。',
@@ -455,9 +455,9 @@ export const translations = {
       },
       {
         role: 'ハッカソン受賞者',
-        company: 'JPHACK 2023',
+        company: 'JPHACKS 2023',
         year: '2023年11月',
-        description: '日本最大級のハッカソンJPHACK 2023にてJ-Stream賞を受賞。約1ヶ月の開発期間でチームコラボレーションにより革新的なソリューションを開発。',
+        description: '日本最大級のハッカソンJPHACKS 2023にてJ-Stream賞を受賞。約1ヶ月の開発期間でチームコラボレーションにより革新的なソリューションを開発。',
         technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング']
       }
     ],
@@ -497,7 +497,7 @@ export const translations = {
         category: '開発'
       },
       {
-        title: 'JPHACK 2023からの学び',
+        title: 'JPHACKS 2023からの学び',
         excerpt: '日本最大級のハッカソンでJ-Stream賞を受賞した経験と、迅速なプロトタイピングの重要性について。',
         category: 'ハッカソン'
       },
