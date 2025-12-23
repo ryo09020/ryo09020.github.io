@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
@@ -63,9 +63,82 @@ const Header = () => {
         >
             <div className="header__container">
                 {/* Logo */}
-                <a href="#home" className="header__logo" onClick={(e) => handleNavClick(e, '#home')}>
-                    <span className="header__logo-text">Ryo</span>
-                </a>
+                <Link to="/card" className="header__logo">
+                    <motion.div
+                        className="header__logo-text"
+                        initial="rest"
+                        whileHover="hover"
+                        animate="rest"
+                    >
+                        <motion.span
+                            variants={{
+                                rest: { y: 0, x: 0, rotate: 0, scale: 1, opacity: 1 },
+                                hover: {
+                                    y: 15,
+                                    x: 50,
+                                    rotate: 45,
+                                    scale: 0,
+                                    opacity: 0,
+                                    transition: { duration: 0.4, ease: "easeIn" }
+                                }
+                            }}
+                            style={{ display: 'inline-block' }}
+                        >
+                            R
+                        </motion.span>
+                        <motion.span
+                            variants={{
+                                rest: { y: 0, x: 0, rotate: 0, scale: 1, opacity: 1 },
+                                hover: {
+                                    y: 15,
+                                    x: 20,
+                                    rotate: -45,
+                                    scale: 0,
+                                    opacity: 0,
+                                    transition: { duration: 0.4, delay: 0.1, ease: "easeIn" }
+                                }
+                            }}
+                            style={{ display: 'inline-block' }}
+                        >
+                            y
+                        </motion.span>
+                        <motion.span
+                            variants={{
+                                rest: {
+                                    scale: 1,
+                                    rotateX: 0,
+                                    y: 0,
+                                    color: 'var(--c-text-primary)'
+                                },
+                                hover: {
+                                    // Sequence: Normal -> Hole -> Hole(Eat) -> Fat O -> Burp -> Normal
+                                    scale: [1, 2.5, 2.5, 1.5, 1.6, 1],
+                                    rotateX: [0, 75, 75, 0, -10, 0],
+                                    y: [0, 10, 10, -5, -8, 0],
+                                    color: [
+                                        'var(--c-text-primary)',
+                                        'var(--c-accent)',
+                                        'var(--c-accent)',
+                                        'var(--c-accent)',
+                                        'var(--c-accent)',
+                                        'var(--c-text-primary)'
+                                    ],
+                                    transition: {
+                                        duration: 2.5,
+                                        times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+                                        ease: "easeInOut"
+                                    }
+                                }
+                            }}
+                            style={{
+                                display: 'inline-block',
+                                transformOrigin: "bottom center"
+                            }}
+                        >
+                            o
+                        </motion.span>
+                    </motion.div>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="header__nav">

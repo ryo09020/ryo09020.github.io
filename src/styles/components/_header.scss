@@ -48,7 +48,10 @@
     }
 
     &-text {
-      display: block;
+      display: flex;
+      align-items: baseline;
+      perspective: 1000px;
+      transform-style: preserve-3d;
     }
 
     &-icon {
