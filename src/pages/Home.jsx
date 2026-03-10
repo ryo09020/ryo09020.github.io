@@ -147,6 +147,18 @@ const Home = () => {
                                             <span key={tech} className="home__tech-tag home__tech-tag--academic">{tech}</span>
                                         ))}
                                     </div>
+                                    {item.links && (
+                                        <div className="home__project-links" style={{ marginTop: '0.75rem' }}>
+                                            {item.links.map((link, i) => (
+                                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
+                                                    {link.label}
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
                                     {item.image && (
                                         <img src={item.image} alt={item.company} className="home__timeline-image" />
                                     )}
@@ -191,6 +203,18 @@ const Home = () => {
                                             <span key={tech} className="home__tech-tag home__tech-tag--professional">{tech}</span>
                                         ))}
                                     </div>
+                                    {item.links && (
+                                        <div className="home__project-links" style={{ marginTop: '0.75rem' }}>
+                                            {item.links.map((link, i) => (
+                                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
+                                                    {link.label}
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
                                     {item.image && (
                                         <img src={item.image} alt={item.company} className="home__timeline-image" />
                                     )}
@@ -235,6 +259,18 @@ const Home = () => {
                                             <span key={tech} className="home__tech-tag home__tech-tag--extracurricular">{tech}</span>
                                         ))}
                                     </div>
+                                    {item.links && (
+                                        <div className="home__project-links" style={{ marginTop: '0.75rem' }}>
+                                            {item.links.map((link, i) => (
+                                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
+                                                    {link.label}
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
                                     {item.image && (
                                         <img src={item.image} alt={item.company} className="home__timeline-image" />
                                     )}

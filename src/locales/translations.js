@@ -161,7 +161,7 @@ export const translations = {
         company: 'MoneyForward Inc.',
         year: '2025 - Present',
         description: 'Implementing Passkey authentication system using Ruby on Rails. Working on security enhancements and modern authentication solutions for financial technology platform.',
-        technologies: ['Ruby on Rails', 'Passkey', 'Authentication', 'Security','Go']
+        technologies: ['Ruby on Rails', 'Passkey', 'Authentication', 'Security', 'Go']
       },
       {
         role: 'Software Engineer Intern',
@@ -180,6 +180,23 @@ export const translations = {
     ],
 
     extracurricularExp: [
+      {
+        role: 'Working Holiday (Coming Soon)',
+        company: 'Canada',
+        year: 'April 2026 - March 2027',
+        description: 'Planning to go on a working holiday in Canada to experience new cultures, improve language skills, and explore diverse opportunities.',
+        technologies: ['Cross-cultural Experience', 'English Communication', 'Coming Soon']
+      },
+      {
+        role: 'Student Encouragement Award',
+        company: 'IPSJ National Convention',
+        year: 'March 2026',
+        description: 'Received the Student Encouragement Award for presenting a verification experiment on the effectiveness of the task management app "ketchup". The award recognized the detailed implementation of the app and the quality of the presentation.',
+        technologies: ['React', 'TypeScript', 'Presentation', 'Verification Experiment'],
+        links: [
+          { label: 'Read Paper', url: '/images/paper1.pdf' }
+        ]
+      },
       {
         role: 'Study Abroad Student',
         company: 'University at Albany, SUNY',
@@ -446,6 +463,23 @@ export const translations = {
     ],
 
     extracurricularExp: [
+      {
+        role: 'ワーキングホリデー (Coming Soon)',
+        company: 'カナダ',
+        year: '2026年4月 - 2027年3月',
+        description: 'ワーキングホリデーでカナダへ渡航予定。新しい文化を体験し、語学力を向上させながら、新たな目標や機会を探求していく予定です。（※詳細は未定）',
+        technologies: ['異文化体験', '英語コミュニケーション', 'Coming Soon']
+      },
+      {
+        role: '学生奨励賞 受賞',
+        company: '情報処理学会 全国大会',
+        year: '2026年3月',
+        description: '主要プロジェクトに記載している「ketchup」について大学で検証実験を行い、その実験結果からのアプリの効果の検証について発表。プレゼンやアプリの仕組み、実装の細部へのこだわりが評価され賞を頂きました。',
+        technologies: ['React', 'TypeScript', 'プレゼンテーション', '検証実験'],
+        links: [
+          { label: '論文を読む', url: '/images/paper1.pdf' }
+        ]
+      },
       {
         role: '交換留学生',
         company: 'ニューヨーク州立大学オルバニー校',
