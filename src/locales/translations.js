@@ -194,7 +194,7 @@ export const translations = {
         description: 'Received the Student Encouragement Award for presenting a verification experiment on the effectiveness of the task management app "ketchup". The award recognized the detailed implementation of the app and the quality of the presentation.',
         technologies: ['React', 'TypeScript', 'Presentation', 'Verification Experiment'],
         links: [
-          { label: 'Read Paper', url: '/images/paper1.pdf' }
+          { label: 'Read Paper', url: '/pdfs/paper1.pdf' }
         ]
       },
       {
@@ -477,7 +477,7 @@ export const translations = {
         description: '主要プロジェクトに記載している「KetchUp」について大学で検証実験を行い、その実験結果からのアプリの効果の検証について発表。プレゼンやアプリの仕組み、実装の細部へのこだわりが評価され受賞。',
         technologies: ['React', 'TypeScript', 'プレゼンテーション', '検証実験'],
         links: [
-          { label: '論文を読む', url: '/images/paper1.pdf' }
+          { label: '論文を読む', url: '/pdfs/paper1.pdf' }
         ]
       },
       {
