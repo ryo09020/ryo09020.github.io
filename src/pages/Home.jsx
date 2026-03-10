@@ -109,11 +109,52 @@ const Home = () => {
                             <span key={index} className="home__personality-tag">{tag}</span>
                         ))}
                     </motion.div>
+
+                    {/* Brief Profile (formerly Personal Section) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="home__personal-content"
+                        style={{ marginTop: '5rem' }}
+                    >
+                        <h3 className="home__personality-concept" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>{t('briefProfile')}</h3>
+
+                        <div className="home__personal-body">
+                            <div className="home__personal-visual">
+                                <div className="home__personal-image-container">
+                                    <img src="/images/pixar.jpg" alt="Personal" className="home__personal-image" />
+                                </div>
+                            </div>
+
+                            <div className="home__personal-info">
+                                <div className="home__personal-profile">
+                                    {[
+                                        { key: 'name', label: t('profileLabels').name, value: t('personalProfile').name },
+                                        { key: 'age', label: t('profileLabels').age, value: t('personalProfile').age },
+                                        { key: 'location', label: t('profileLabels').location, value: t('personalProfile').location },
+                                        { key: 'education', label: t('profileLabels').education, value: t('personalProfile').education },
+                                        { key: 'interests', label: t('profileLabels').interests, value: t('personalProfile').interests }
+                                    ].map(item => (
+                                        <React.Fragment key={item.key}>
+                                            <div className="home__personal-label">{item.label}</div>
+                                            <div className="home__personal-value">{item.value}</div>
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+
+                                <p className="home__personal-text">
+                                    {t('personalText1')}
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Journey / Experience Section */}
-            <section className="home__experience home__experience--academic">
+            <section className="home__experience home__experience--academic" id="work">
                 <div className="home__container">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -281,49 +322,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Personal Section */}
-            <section className="home__personal">
-                <div className="home__container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="home__personal-content"
-                    >
-                        <h2 className="home__section-title">{t('beyondCode')}</h2>
-
-                        <div className="home__personal-body">
-                            <div className="home__personal-visual">
-                                <div className="home__personal-image-container">
-                                    <img src="/images/pixar.jpg" alt="Personal" className="home__personal-image" />
-                                </div>
-                            </div>
-
-                            <div className="home__personal-info">
-                                <div className="home__personal-profile">
-                                    {[
-                                        { key: 'name', label: t('profileLabels').name, value: t('personalProfile').name },
-                                        { key: 'age', label: t('profileLabels').age, value: t('personalProfile').age },
-                                        { key: 'location', label: t('profileLabels').location, value: t('personalProfile').location },
-                                        { key: 'education', label: t('profileLabels').education, value: t('personalProfile').education },
-                                        { key: 'interests', label: t('profileLabels').interests, value: t('personalProfile').interests }
-                                    ].map(item => (
-                                        <React.Fragment key={item.key}>
-                                            <div className="home__personal-label">{item.label}</div>
-                                            <div className="home__personal-value">{item.value}</div>
-                                        </React.Fragment>
-                                    ))}
-                                </div>
-
-                                <p className="home__personal-text">
-                                    {t('personalText1')}
-                                </p>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
 
             {/* Skills Section */}
             <section className="home__skills">
@@ -377,7 +375,7 @@ const Home = () => {
             </section>
 
             {/* Projects Section */}
-            <section className="home__projects" id="work">
+            <section className="home__projects">
                 <div className="home__projects-container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

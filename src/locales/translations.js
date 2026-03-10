@@ -119,7 +119,7 @@ export const translations = {
 
     skillsTechnologies: 'Skills & Technologies',
     education: 'Education',
-    beyondCode: 'Beyond Development',
+    briefProfile: 'Profile',
     personalText1: 'When I\'m not coding, I enjoy reading and playing video games (recently Smash Bros). I also practice Kyudo (Japanese Archery), which I have been doing since middle school. I love exploring new technologies and contributing to open-source projects.',
     personalProfile: {
       name: 'Ryo',
@@ -395,8 +395,8 @@ export const translations = {
 
     skillsTechnologies: 'スキル・技術',
     education: '学歴',
-    beyondCode: '開発以外の活動',
-    personalText1: 'コーディングや勉強をしていない時は、読書やゲーム（最近はスマブラ）を楽しんでいます。また、中学時代から続けている弓道も行っています。技術革新の最前線に立ち続けることを大切にしています。',
+    briefProfile: 'プロフィール',
+    personalText1: 'コーディングや勉強をしていない時は、読書やゲームを楽しんでいます。また、中学時代から続けている弓道も行っています。技術革新の最前線に立ち続けることを大切にしています。',
     personalProfile: {
       name: 'Ryo',
       age: '24',
@@ -474,7 +474,7 @@ export const translations = {
         role: '学生奨励賞 受賞',
         company: '情報処理学会 全国大会',
         year: '2026年3月',
-        description: '主要プロジェクトに記載している「ketchup」について大学で検証実験を行い、その実験結果からのアプリの効果の検証について発表。プレゼンやアプリの仕組み、実装の細部へのこだわりが評価され賞を頂きました。',
+        description: '主要プロジェクトに記載している「KetchUp」について大学で検証実験を行い、その実験結果からのアプリの効果の検証について発表。プレゼンやアプリの仕組み、実装の細部へのこだわりが評価され受賞。',
         technologies: ['React', 'TypeScript', 'プレゼンテーション', '検証実験'],
         links: [
           { label: '論文を読む', url: '/images/paper1.pdf' }
