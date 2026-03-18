@@ -213,7 +213,8 @@ export const translations = {
         description: 'Won J-Stream Award at JPHACKS 2023, one of Japan\'s largest hackathons. Developed innovative solution over about a month with team collaboration.',
         technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping'],
         links: [
-          { label: 'Result Page', url: 'https://jphacks.com/2023/result/' }
+          { label: 'Result Page', url: 'https://jphacks.com/2023/result/' },
+          { label: 'Tohoku Univ. News', url: 'https://www.is.tohoku.ac.jp/jp/news/award_s/detail---id-1420.html' }
         ]
       }
     ],
@@ -501,7 +502,8 @@ export const translations = {
         description: '日本最大級のハッカソンJPHACKS 2023にてJ-Stream賞を受賞。約1ヶ月の開発期間でチームコラボレーションにより革新的なソリューションを開発。',
         technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング'],
         links: [
-          { label: '結果ページ', url: 'https://jphacks.com/2023/result/' }
+          { label: '結果ページ', url: 'https://jphacks.com/2023/result/' },
+          { label: '東北大学からのお知らせ', url: 'https://www.is.tohoku.ac.jp/jp/news/award_s/detail---id-1420.html' }
         ]
       }
     ],
