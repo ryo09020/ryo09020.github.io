@@ -194,7 +194,9 @@ export const translations = {
         description: 'Received the Student Encouragement Award for presenting a verification experiment on the effectiveness of the task management app "ketchup". The award recognized the detailed implementation of the app and the quality of the presentation.',
         technologies: ['React', 'TypeScript', 'Presentation', 'Verification Experiment'],
         links: [
-          { label: 'Read Paper', url: '/pdfs/paper1.pdf' }
+          { label: 'Read Paper', url: '/pdfs/paper1.pdf' },
+          { label: 'Conference Website', url: 'https://www.ipsj.or.jp/award/taikaigakusei.html' },
+          { label: 'Tohoku Univ. Announcement', url: 'https://www.is.tohoku.ac.jp/jp/news/award_s/detail---id-1720.html' }
         ]
       },
       {
@@ -210,6 +212,9 @@ export const translations = {
         year: 'November 2023',
         description: 'Won J-Stream Award at JPHACKS 2023, one of Japan\'s largest hackathons. Developed innovative solution over about a month with team collaboration.',
         technologies: ['Hackathon', 'Innovation', 'Team Leadership', 'Rapid Prototyping'],
+        links: [
+          { label: 'Result Page', url: 'https://jphacks.com/2023/result/' }
+        ]
       }
     ],
 
@@ -477,7 +482,9 @@ export const translations = {
         description: '主要プロジェクトに記載している「KetchUp」について大学で検証実験を行い、その実験結果からのアプリの効果の検証について発表。プレゼンやアプリの仕組み、実装の細部へのこだわりが評価され受賞。',
         technologies: ['React', 'TypeScript', 'プレゼンテーション', '検証実験'],
         links: [
-          { label: '論文を読む', url: '/pdfs/paper1.pdf' }
+          { label: '論文を読む', url: '/pdfs/paper1.pdf' },
+          { label: '大会ホームページ', url: 'https://www.ipsj.or.jp/award/taikaigakusei.html' },
+          { label: '東北大学からのお知らせ', url: 'https://www.is.tohoku.ac.jp/jp/news/award_s/detail---id-1720.html' }
         ]
       },
       {
@@ -488,11 +495,14 @@ export const translations = {
         technologies: ['英語コミュニケーション', '異文化交流', '語学学習']
       },
       {
-        role: 'ハッカソン受賞者',
+        role: 'JPHACKSにてスポンサー賞を受賞',
         company: 'JPHACKS 2023',
         year: '2023年11月',
         description: '日本最大級のハッカソンJPHACKS 2023にてJ-Stream賞を受賞。約1ヶ月の開発期間でチームコラボレーションにより革新的なソリューションを開発。',
-        technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング']
+        technologies: ['ハッカソン', 'イノベーション', 'チームリーダーシップ', '迅速なプロトタイピング'],
+        links: [
+          { label: '結果ページ', url: 'https://jphacks.com/2023/result/' }
+        ]
       }
     ],
 
