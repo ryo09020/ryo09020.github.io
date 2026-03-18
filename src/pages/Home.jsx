@@ -4,6 +4,7 @@ import { SiRubyonrails, SiGo, SiReact, SiTypescript, SiPostgresql, SiMysql, SiPy
 import { FaAws } from "react-icons/fa";
 
 import { useTranslation } from '../hooks/useTranslation';
+import TableOfContents from '../components/TableOfContents';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -24,7 +25,9 @@ const Home = () => {
     };
 
     return (
-        <div className="home">
+        <div className="home-wrapper">
+            <TableOfContents />
+            <div className="home">
             {/* Hero Section */}
             <section className="home__hero" id="home">
                 <div className="home__hero-container">
@@ -324,7 +327,7 @@ const Home = () => {
 
 
             {/* Skills Section */}
-            <section className="home__skills">
+            <section className="home__skills" id="skills">
                 <div className="home__skills-marquee-wrapper">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -375,7 +378,7 @@ const Home = () => {
             </section>
 
             {/* Projects Section */}
-            <section className="home__projects">
+            <section className="home__projects" id="projects">
                 <div className="home__projects-container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -450,6 +453,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            </div>
         </div>
     );
 };

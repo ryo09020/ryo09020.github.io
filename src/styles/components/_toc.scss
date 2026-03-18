@@ -1,0 +1,145 @@
+// Table of Contents / Sidebar Navigation
+.home-wrapper {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.toc {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.toc__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: auto;
+  padding: 0.75rem 0.5rem;
+  justify-content: center;
+  pointer-events: auto;
+  background: rgba(var(--c-bg-secondary-rgb), 0.55);
+  border: 1px solid var(--c-border-secondary);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toc__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toc__link {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: none;
+  font-size: 0;
+  color: transparent;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.toc__indicator {
+  width: 3px;
+  height: 24px;
+  background-color: var(--c-text-tertiary);
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 24px;
+    border-radius: 2px;
+  }
+}
+
+.toc__link--active {
+  .toc__indicator {
+    background: var(--c-accent);
+    box-shadow: none;
+  }
+}
+
+// Main content should respect the sidebar
+.home {
+  width: 100%;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Mobile / Tablet
+@media (max-width: 768px) {
+  .toc {
+    right: 0.75rem;
+  }
+
+  .toc__nav {
+    padding: 0.625rem 0.45rem;
+  }
+
+  .toc__link {
+    height: 34px;
+  }
+}
+
+// Smaller tablets and phones
+@media (max-width: 480px) {
+  .toc__list {
+    gap: 0.5rem;
+  }
+
+  .toc__indicator {
+    height: 20px;
+  }
+}
