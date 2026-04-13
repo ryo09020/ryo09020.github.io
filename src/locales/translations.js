@@ -7,8 +7,7 @@ export const translations = {
 
     // Home Page
     heroTitle: 'Software Engineer',
-    heroTitleAccent: '& Graduate Student',
-    heroDescription: 'Currently pursuing a Master\'s degree in Information Science at Tohoku University while gaining practical experience in software development. Specializing in web applications with Ruby on Rails, Go, and modern frontend technologies.',
+    heroDescription: 'Received a Master\'s degree in Information Science from Tohoku University, with practical experience in software development. Specializing in web applications with Ruby on Rails, Go, and modern frontend technologies.',
     viewMyWork: 'View My Work',
     aboutMe: 'About Me',
     skillsTitle: 'Skills & Technologies',
@@ -41,10 +40,10 @@ export const translations = {
     projects: [
       {
         title: 'Ketchup',
-        description: 'A comprehensive task management platform adopted by the Tohoku University Student Project. I am energetically developing this to solve real-world productivity challenges, iterating daily based on user feedback. The app is publicly available.',
+        description: 'A comprehensive task management platform adopted by the Tohoku University Student Project. I developed this to solve real-world productivity challenges, focusing on utility and user experience. The app is publicly available.',
         tags: ['TypeScript', 'React', 'PostgreSQL'],
-        status: 'Active Development',
-        type: 'active',
+        status: 'Completed',
+        type: 'completed',
         category: 'Academic',
         links: [
           { label: 'App', url: 'https://ketch-up.net' },
@@ -107,7 +106,7 @@ export const translations = {
 
     // Profile Page
     aboutMeTitle: 'About Me',
-    profileDescription: "I'm a graduate student at Tohoku University pursuing a Master's in Information Science, with hands-on experience in software development at leading tech companies. I'm passionate about building scalable web applications and exploring cutting-edge technologies.",
+    profileDescription: "I hold a Master's in Information Science from Tohoku University, with hands-on experience in software development at leading tech companies. I'm passionate about building scalable web applications and exploring cutting-edge technologies.",
     yearsExperience: 'Years Experience',
     projectsCompleted: 'Projects Completed',
     hackathonWins: 'Hackathon Awards',
@@ -140,10 +139,10 @@ export const translations = {
     // Experience Data
     academicExp: [
       {
-        role: 'Graduate Student',
+        role: 'Master of Information Science',
         company: 'Tohoku University - Graduate School of Information Sciences',
-        year: '2024 - Present (Expected 2026)',
-        description: 'Pursuing Master\'s degree in Information Science. Conducting research on the relationship between psychological traits and dementia. Also leading a student project for task management application development.',
+        year: '2024 - 2026',
+        description: 'Obtained Master\'s degree in Information Science. Conducted research on the relationship between psychological traits and dementia. Also led a student project for task management application development.',
         technologies: ['Dementia Research', 'Data Analysis', 'System Design', 'Project Management']
       },
       {
@@ -224,8 +223,8 @@ export const translations = {
       {
         degree: 'Master of Information Science',
         school: 'Tohoku University - Graduate School of Information Sciences',
-        year: '2024 - 2026 (Expected)',
-        description: 'Specializing in software engineering and system design. Leading student project for task management application development.'
+        year: '2024 - 2026',
+        description: 'Completed master\'s program specializing in software engineering and system design. Led student project for task management application development.'
       },
       {
         degree: 'Bachelor of Engineering',
@@ -266,7 +265,7 @@ export const translations = {
     ],
 
     // Footer
-    footerDescription: 'Graduate Student & Software Engineer based in Sendai, Japan',
+    footerDescription: 'Software Engineer based in Sendai, Japan',
     connect: 'Connect',
     contact: 'Contact',
     allRightsReserved: 'All rights reserved.',
@@ -288,8 +287,7 @@ export const translations = {
 
     // Home Page
     heroTitle: 'ソフトウェアエンジニア',
-    heroTitleAccent: '& 大学院生',
-    heroDescription: '東北大学大学院情報科学研究科で修士課程を履修しながら、ソフトウェア開発の実務経験を積んでいます。Ruby on Rails、Go、モダンなフロントエンド技術を用いたWebアプリケーション開発を専門としています。',
+    heroDescription: '東北大学大学院情報科学研究科で修士課程を修了し、ソフトウェア開発の実務経験を積んでいます。Ruby on Rails、Go、モダンなフロントエンド技術を用いたWebアプリケーション開発を専門としています。',
     viewMyWork: '実績を見る',
     aboutMe: 'プロフィール',
     skillsTitle: 'スキル・技術',
@@ -322,10 +320,10 @@ export const translations = {
     projects: [
       {
         title: 'Ketchup',
-        description: '現在、最も情熱を注いで開発しているプロジェクトです。東北大学学生プロジェクトに採択されたタスク管理プラットフォームとして、実用性とユーザー体験を追求し、日々精力的に開発を進めています。アプリは公開中です。',
+        description: '東北大学学生プロジェクトに採択されたタスク管理プラットフォームとして、実用性とユーザー体験を追求し開発したプロジェクトです。アプリは公開中です。',
         tags: ['TypeScript', 'React', 'PostgreSQL'],
-        status: '活発に開発中',
-        type: 'active',
+        status: '完了',
+        type: 'completed',
         category: '学業',
         links: [
           { label: 'アプリ', url: 'https://ketch-up.net' },
@@ -389,7 +387,7 @@ export const translations = {
 
     // Profile Page
     aboutMeTitle: 'プロフィール',
-    profileDescription: '東北大学大学院情報科学研究科で修士課程を履修し、大手テック企業でのソフトウェア開発の実務経験を持つ大学院生です。スケーラブルなWebアプリケーションの構築と最先端技術の探求に情熱を注いでいます。',
+    profileDescription: '東北大学大学院情報科学研究科で修士課程を修了し、テック企業でのソフトウェア開発の実務経験を持ちます。スケーラブルなWebアプリケーションの構築と最先端技術の探求に情熱を注いでいます。',
     yearsExperience: '年の経験',
     projectsCompleted: 'プロジェクト完了',
     hackathonWins: 'ハッカソン受賞',
@@ -429,10 +427,10 @@ export const translations = {
     // Experience Data
     academicExp: [
       {
-        role: '大学院生',
+        role: '情報科学修士',
         company: '東北大学大学院情報科学研究科',
-        year: '2024年 - 現在（2026年修了予定）',
-        description: '情報科学の修士課程を履修中。認知症と心理的特徴の関係性についての研究に従事。タスク管理アプリケーション開発の学生プロジェクトもリードしている。',
+        year: '2024年 - 2026年',
+        description: '情報科学の修士課程を修了。認知症と心理的特徴の関係性についての研究に従事。タスク管理アプリケーション開発の学生プロジェクトもリードした。',
         technologies: ['認知症研究', 'データ分析', 'システム設計', 'プロジェクト管理']
       },
       {
@@ -513,7 +511,7 @@ export const translations = {
       {
         degree: '情報科学修士',
         school: '東北大学大学院情報科学研究科',
-        year: '2024年 - 2026年（修了予定）',
+        year: '2024年 - 2026年',
         description: 'ソフトウェア工学とシステム設計を専攻。タスク管理アプリケーション開発の学生プロジェクトをリード。'
       },
       {
@@ -555,7 +553,7 @@ export const translations = {
     ],
 
     // Footer
-    footerDescription: '仙台を拠点とする大学院生・ソフトウェアエンジニア',
+    footerDescription: '仙台を拠点とするソフトウェアエンジニア',
     connect: '連絡先',
     contact: 'お問い合わせ',
     allRightsReserved: 'All rights reserved.',

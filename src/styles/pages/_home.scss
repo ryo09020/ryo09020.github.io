@@ -47,13 +47,6 @@
       line-height: 1.1;
       color: $c-black;
       margin: 0;
-
-      &-accent {
-        background: linear-gradient(135deg, $c-accent 0%, $c-accent-dark 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
     }
 
     &-description {
