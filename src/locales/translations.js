@@ -8,6 +8,7 @@ export const translations = {
     // Home Page
     heroTitle: 'Software Engineer',
     heroDescription: 'Received a Master\'s degree in Information Science from Tohoku University, with practical experience in software development. Specializing in web applications with Ruby on Rails, Go, and modern frontend technologies.',
+    heroShortBio: 'Information Science Master\'s graduate. Web app developer specializing in Ruby on Rails, Go, and frontend technologies.',
     viewMyWork: 'View My Work',
     aboutMe: 'About Me',
     skillsTitle: 'Skills & Technologies',
@@ -288,6 +289,7 @@ export const translations = {
     // Home Page
     heroTitle: 'ソフトウェアエンジニア',
     heroDescription: '東北大学大学院情報科学研究科で修士課程を修了し、ソフトウェア開発の実務経験を積んでいます。Ruby on Rails、Go、モダンなフロントエンド技術を用いたWebアプリケーション開発を専門としています。',
+    heroShortBio: '東北大学大学院情報科学研究科修了。Ruby on RailsやGo等を用いたWebアプリ開発を専門としています。',
     viewMyWork: '実績を見る',
     aboutMe: 'プロフィール',
     skillsTitle: 'スキル・技術',

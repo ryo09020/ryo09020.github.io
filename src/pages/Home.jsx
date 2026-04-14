@@ -5,6 +5,7 @@ import { FaAws } from "react-icons/fa";
 
 import { useTranslation } from '../hooks/useTranslation';
 import TableOfContents from '../components/TableOfContents';
+import AIChatbot from '../components/AIChatbot';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -32,28 +33,6 @@ const Home = () => {
                 <section className="home__hero" id="home">
                     <div className="home__hero-container">
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="home__hero-content"
-                        >
-                            <h1 className="home__hero-title">
-                                {t('heroTitle')}
-                            </h1>
-                            <p className="home__hero-description">
-                                {t('heroDescription')}
-                            </p>
-                            <div className="home__hero-actions">
-                                <a href="#work" className="home__hero-btn home__hero-btn--primary">
-                                    {t('viewMyWork')}
-                                </a>
-                                <a href="#about" className="home__hero-btn home__hero-btn--secondary">
-                                    {t('aboutMe')}
-                                </a>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -63,6 +42,21 @@ const Home = () => {
                                 <div className="home__hero-avatar-bg"></div>
                                 <img src="/images/night.jpg" alt="Profile" className="home__hero-avatar-img" />
                             </div>
+                            <p className="home__hero-short-bio">
+                                {t('heroShortBio')}
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                            className="home__hero-content"
+                        >
+                            <h1 className="home__hero-title" style={{ marginBottom: '1.5rem' }}>
+                                {t('heroTitle')}
+                            </h1>
+                            <AIChatbot />
                         </motion.div>
                     </div>
                 </section>
