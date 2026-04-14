@@ -32,6 +32,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_AI_PROXY_URL: ${{ secrets.VITE_AI_PROXY_URL }}
+          VITE_AI_MODEL: ${{ vars.VITE_AI_MODEL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
