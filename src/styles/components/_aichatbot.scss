@@ -182,4 +182,63 @@
             }
         }
     }
+
+    &__disclaimer {
+        font-size: 11px;
+        text-align: center;
+        color: $c-gray-400;
+        padding: 0 8px 12px;
+        background-color: $c-white;
+    }
+}
+
+// Dark Mode Support
+[data-theme='dark'] {
+    .home__hero-chattitle {
+        color: #f5f5f5;
+    }
+
+    .ai-chatbot {
+        background-color: var(--c-bg-secondary);
+        color: #f5f5f5;
+
+        &__header {
+            background-color: rgba(23, 23, 23, 0.9);
+            border-bottom-color: rgba(255, 255, 255, 0.05);
+        }
+
+        &__status h4 {
+            color: #f5f5f5;
+        }
+
+        &__messages {
+            background-color: var(--c-bg-primary);
+        }
+
+        &__message--ai .ai-chatbot__bubble {
+            background-color: var(--c-bg-secondary);
+            color: #f5f5f5;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &__input-area {
+            background-color: var(--c-bg-secondary);
+            border-top-color: rgba(255, 255, 255, 0.05);
+
+            input {
+                background-color: var(--c-bg-primary);
+                color: #f5f5f5;
+                border-color: rgba(255, 255, 255, 0.1);
+
+                &::placeholder {
+                    color: $c-gray-400;
+                }
+            }
+        }
+
+        &__disclaimer {
+            background-color: var(--c-bg-secondary);
+            color: $c-gray-400;
+        }
+    }
 }
