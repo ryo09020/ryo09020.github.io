@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const AIChatbot = () => {
+    const { t } = useTranslation();
     const [messages, setMessages] = useState([
-        { id: 1, role: 'ai', text: 'こんにちは！AIのRyoです。何でも聞いてください！' }
+        { id: 1, role: 'ai', isGreeting: true }
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -45,7 +47,7 @@ const AIChatbot = () => {
 
             const workerUrl = import.meta.env.VITE_AI_PROXY_URL;
             if (!workerUrl) {
-                throw new Error("VITE_AI_PROXY_URL is not configured in .env file.");
+                throw new Error("Configuration Error");
             }
 
             const response = await fetch(workerUrl, {
@@ -61,7 +63,7 @@ const AIChatbot = () => {
             });
 
             if (!response.ok) {
-                throw new Error(`API responded with status: ${response.status}`);
+                throw new Error("Network Error");
             }
 
             const data = await response.json();
@@ -77,7 +79,7 @@ const AIChatbot = () => {
             setMessages(prev => [...prev, newAiMessage]);
 
         } catch (error) {
-            console.error("Failed to fetch AI response:", error);
+            // エラーの内容を開発者ツール(console)に出力しない
             const errorAiMessage = {
                 id: Date.now() + 1,
                 role: 'ai',
@@ -106,7 +108,7 @@ const AIChatbot = () => {
                     {messages.map(msg => (
                         <div key={msg.id} className={`ai-chatbot__message ai-chatbot__message--${msg.role}`}>
                             <div className="ai-chatbot__bubble">
-                                {msg.text}
+                                {msg.isGreeting ? t('heroChatGreeting') : msg.text}
                             </div>
                         </div>
                     ))}
@@ -124,7 +126,7 @@ const AIChatbot = () => {
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
-                        placeholder="AIと会話する..."
+                        placeholder={t('heroChatPlaceholder')}
                         autoComplete="off"
                     />
                     <button type="submit" disabled={!inputValue.trim() || isTyping}>
@@ -134,8 +136,8 @@ const AIChatbot = () => {
                         </svg>
                     </button>
                 </form>
-                <div style={{ fontSize: '11px', textAlign: 'center', color: '#94a3b8', padding: '0 8px 12px', backgroundColor: '#fff' }}>
-                    ※プライバシー保護のため、会話履歴はページを更新するとリセットされます
+                <div className="ai-chatbot__disclaimer">
+                    {t('heroChatDisclaimer')}
                 </div>
             </div>
         </div>

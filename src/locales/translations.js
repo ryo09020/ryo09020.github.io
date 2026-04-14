@@ -7,6 +7,10 @@ export const translations = {
 
     // Home Page
     heroTitle: 'Software Engineer',
+    heroChatTitle: "Let's talk with AI Ryo!!",
+    heroChatGreeting: "Hi! I'm AI Ryo. Feel free to ask me anything!",
+    heroChatPlaceholder: "Type a message...",
+    heroChatDisclaimer: "* For privacy protection, conversation history is reset when you refresh the page.",
     heroDescription: 'Received a Master\'s degree in Information Science from Tohoku University, with practical experience in software development. Specializing in web applications with Ruby on Rails, Go, and modern frontend technologies.',
     heroShortBio: 'Information Science Master\'s graduate. Web app developer specializing in Ruby on Rails, Go, and frontend technologies.',
     viewMyWork: 'View My Work',
@@ -181,13 +185,6 @@ export const translations = {
 
     extracurricularExp: [
       {
-        role: 'Working Holiday (Coming Soon)',
-        company: 'Canada',
-        year: 'April 2026 - March 2027',
-        description: 'Planning to go on a working holiday in Canada to experience new cultures, improve language skills, and explore diverse opportunities.',
-        technologies: ['Cross-cultural Experience', 'English Communication', 'Coming Soon']
-      },
-      {
         role: 'Student Encouragement Award',
         company: 'IPSJ National Convention',
         year: 'March 2026',
@@ -288,6 +285,10 @@ export const translations = {
 
     // Home Page
     heroTitle: 'ソフトウェアエンジニア',
+    heroChatTitle: 'AIのRyoと話してみましょう！！',
+    heroChatGreeting: 'こんにちは！AIのRyoです。何でも聞いてください！',
+    heroChatPlaceholder: 'メッセージを入力...',
+    heroChatDisclaimer: '※プライバシー保護のため、会話履歴はページを更新するとリセットされます',
     heroDescription: '東北大学大学院情報科学研究科で修士課程を修了し、ソフトウェア開発の実務経験を積んでいます。Ruby on Rails、Go、モダンなフロントエンド技術を用いたWebアプリケーション開発を専門としています。',
     heroShortBio: '東北大学大学院情報科学研究科修了。Ruby on RailsやGo等を用いたWebアプリ開発を専門としています。',
     viewMyWork: '実績を見る',
@@ -469,13 +470,6 @@ export const translations = {
     ],
 
     extracurricularExp: [
-      {
-        role: 'ワーキングホリデー (Coming Soon)',
-        company: 'カナダ',
-        year: '2026年4月 - 2027年3月',
-        description: 'ワーキングホリデーでカナダへ渡航予定。新しい文化を体験し、語学力を向上させながら、新たな目標や機会を探求していく予定です。（※詳細は未定）',
-        technologies: ['異文化体験', '英語コミュニケーション', 'Coming Soon']
-      },
       {
         role: '学生奨励賞 受賞',
         company: '情報処理学会 全国大会',

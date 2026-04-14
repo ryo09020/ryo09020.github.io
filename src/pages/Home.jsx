@@ -53,9 +53,9 @@ const Home = () => {
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             className="home__hero-content"
                         >
-                            <h1 className="home__hero-title" style={{ marginBottom: '1.5rem' }}>
-                                {t('heroTitle')}
-                            </h1>
+                            <h2 className="home__hero-chattitle" style={{ marginBottom: '1.2rem', fontSize: '1.6rem', fontWeight: 'bold' }}>
+                                💬 {t('heroChatTitle')}
+                            </h2>
                             <AIChatbot />
                         </motion.div>
                     </div>
