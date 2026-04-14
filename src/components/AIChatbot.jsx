@@ -83,7 +83,7 @@ const AIChatbot = () => {
             const errorAiMessage = {
                 id: Date.now() + 1,
                 role: 'ai',
-                text: "エラーが発生しました。現在AIに接続できません。しばらく時間をおいて再度お試しください。"
+                text: "すまん、今サーバー落ちてるわ、多分"
             };
             setMessages(prev => [...prev, errorAiMessage]);
         } finally {
