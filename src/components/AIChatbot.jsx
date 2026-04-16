@@ -84,6 +84,7 @@ const AIChatbot = () => {
             let errorMessage = "すまん、今サーバー落ちてるわ、多分";
 
             switch (error.status) {
+                // 429はWAFでのブロックやCORSエラーなどでステータスが取れない
                 case 429:
                     errorMessage = "まーったく、レートリミットだ。アクセスしすぎ、君の熱意に僕が追いつけてないよ";
                     break;
