@@ -63,7 +63,9 @@ const AIChatbot = () => {
             });
 
             if (!response.ok) {
-                throw new Error("Network Error");
+                const error = new Error("Network Error");
+                error.status = response.status;
+                throw error;
             }
 
             const data = await response.json();
@@ -79,11 +81,23 @@ const AIChatbot = () => {
             setMessages(prev => [...prev, newAiMessage]);
 
         } catch (error) {
+            let errorMessage = "すまん、今サーバー落ちてるわ、多分";
+
+            switch (error.status) {
+                case 429:
+                    errorMessage = "まーったく、レートリミットだ。アクセスしすぎ、君の熱意に僕が追いつけてないよ";
+                    break;
+                case 403:
+                case 405:
+                    errorMessage = "おっと、そこは立ち入り禁止だよ。英国紳士らしくスマートに引き返してね。";
+                    break;
+            }
+
             // エラーの内容を開発者ツール(console)に出力しない
             const errorAiMessage = {
                 id: Date.now() + 1,
                 role: 'ai',
-                text: "すまん、今サーバー落ちてるわ、多分"
+                text: errorMessage
             };
             setMessages(prev => [...prev, errorAiMessage]);
         } finally {
