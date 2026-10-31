@@ -62,12 +62,6 @@ const BusinessCard = () => {
                             >
                                 <FaEnvelope /> ryo9240info@gmail.com
                             </motion.a>
-                            <motion.div
-                                className="business-card__link"
-                                whileHover={{ x: 5 }}
-                            >
-                                <FaMapMarkerAlt /> {profile.location}
-                            </motion.div>
                         </div>
 
                         <div className="business-card__socials">

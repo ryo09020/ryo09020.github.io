@@ -7,8 +7,9 @@ const TableOfContents = () => {
 
   const sections = [
     { id: 'home', label: t('home') },
-    { id: 'about', label: t('personalityTitle') },
-    { id: 'work', label: t('projectsTitle') },
+    { id: 'featured', label: 'KetchUp Desktop' },
+    { id: 'about', label: t('aboutMe') },
+    { id: 'experience', label: t('experienceTitle') },
     { id: 'skills', label: t('skillsTitle') },
     { id: 'projects', label: t('projectsTitle') }
   ];

@@ -9,28 +9,28 @@ $bp-wide: 1440px;
 
 // CSS Variables for Theming
 :root {
-    // Colors - Light Mode (Default)
-    --c-bg-primary: #ffffff;
-    --c-bg-primary-rgb: 255, 255, 255;
-    --c-bg-secondary: #f8f9fa;
-    --c-bg-secondary-rgb: 248, 249, 250;
-    --c-bg-tertiary: #e9ecef;
+    // Colors - Light Mode (Warm Paper / Ecru / Skin-Beige)
+    --c-bg-primary: #f7f4ee; // Soft drawing paper / ecru (low eye strain)
+    --c-bg-primary-rgb: 247, 244, 238;
+    --c-bg-secondary: #ece6da; // Warm skin-beige / canvas card tone
+    --c-bg-secondary-rgb: 236, 230, 218;
+    --c-bg-tertiary: #dfd8cb; // Natural sand / kraft tone
 
-    --c-text-primary: #0a0a0a;
-    --c-text-primary-rgb: 10, 10, 10;
-    --c-text-secondary: #6c757d;
-    --c-text-tertiary: #adb5bd;
+    --c-text-primary: #2a2723; // Natural ink-charcoal (no harsh pure black)
+    --c-text-primary-rgb: 42, 39, 35;
+    --c-text-secondary: #6b645b; // Warm taupe gray
+    --c-text-tertiary: #9c9489; // Muted paper gray
 
-    --c-border-primary: #e9ecef;
-    --c-border-secondary: #dee2e6;
+    --c-border-primary: #e2dcce; // Subtle paper edge border
+    --c-border-secondary: #d0c8b8;
 
-    --c-accent: #6366f1;
-    --c-accent-light: #a5b4fc;
-    --c-accent-dark: #4338ca;
-    --c-accent-rgb: 99, 102, 241; // For rgba usage
+    --c-accent: #b84728; // Warm terracotta / terracotta clay (harmonious with beige)
+    --c-accent-light: #dc6d4e;
+    --c-accent-dark: #8f3319;
+    --c-accent-rgb: 184, 71, 40;
 
-    --c-shadow: rgba(0, 0, 0, 0.1);
-    --c-shadow-strong: rgba(0, 0, 0, 0.2);
+    --c-shadow: rgba(50, 40, 30, 0.05);
+    --c-shadow-strong: rgba(50, 40, 30, 0.12);
 }
 
 [data-theme='dark'] {

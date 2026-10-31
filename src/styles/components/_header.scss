@@ -88,21 +88,34 @@
     }
 
     &--active {
-      color: $c-black;
-      background-color: $c-gray-100;
+      color: var(--c-text-primary);
+      background-color: var(--c-bg-secondary);
+      font-weight: 600;
 
       &::after {
         content: '';
         position: absolute;
-        bottom: -2px;
+        bottom: 2px;
         left: 50%;
         transform: translateX(-50%);
-        width: 4px;
-        height: 4px;
-        background-color: $c-accent;
-        border-radius: 50%;
+        width: 14px;
+        height: 2px;
+        background-color: var(--c-accent);
+        border-radius: 2px;
       }
     }
+  }
+
+  &__nav-badge {
+    margin-left: 6px;
+    padding: 2px 6px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 999px;
+    background: var(--c-accent);
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
   }
 
   &__actions {

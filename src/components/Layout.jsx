@@ -79,7 +79,6 @@ const Layout = () => {
                                     <a href="mailto:ryo9240info@gmail.com" className="layout__footer-link">
                                         ryo9240info@gmail.com
                                     </a>
-                                    <span className="layout__footer-text">Sendai, Japan</span>
                                 </div>
                             </div>
                         </div>
