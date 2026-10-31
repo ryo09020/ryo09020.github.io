@@ -1,446 +1,183 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { SiRubyonrails, SiGo, SiReact, SiTypescript, SiPostgresql, SiMysql, SiPython, SiR, SiDocker, SiTerraform, SiTensorflow } from "react-icons/si";
+import {
+    Terminal,
+    User,
+    MessageSquare,
+    CheckCircle2,
+    ArrowRight,
+    Sparkles,
+    Cpu
+} from 'lucide-react';
+import {
+    SiRubyonrails,
+    SiGo,
+    SiRust,
+    SiReact,
+    SiTypescript,
+    SiPostgresql,
+    SiMysql,
+    SiPython,
+    SiR,
+    SiDocker,
+    SiTerraform,
+    SiTensorflow
+} from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 
 import { useTranslation } from '../hooks/useTranslation';
-import TableOfContents from '../components/TableOfContents';
 import AIChatbot from '../components/AIChatbot';
 
 const Home = () => {
     const { t } = useTranslation();
 
+    // Technology icons
     const SKILL_ICONS = {
-        rails: <SiRubyonrails size={40} color="#CC0000" />,
-        go: <SiGo size={40} color="#00ADD8" />,
-        react: <SiReact size={40} color="#61DAFB" />,
-        typescript: <SiTypescript size={40} color="#3178C6" />,
-        aws: <FaAws size={40} color="#FF9900" />,
-        postgresql: <SiPostgresql size={40} color="#4169E1" />,
-        mysql: <SiMysql size={40} color="#4479A1" />,
-        python: <SiPython size={40} color="#3776AB" />,
-        r: <SiR size={40} color="#276DC3" />,
-        tensorflow: <SiTensorflow size={40} color="#FF6F00" />,
-        docker: <SiDocker size={40} color="#2496ED" />,
-        terraform: <SiTerraform size={40} color="#7B42BC" />
+        rails: <SiRubyonrails size={30} className="skill-icon skill-icon--rails" />,
+        go: <SiGo size={30} className="skill-icon skill-icon--go" />,
+        rust: <SiRust size={30} className="skill-icon skill-icon--rust" />,
+        react: <SiReact size={30} className="skill-icon skill-icon--react" />,
+        typescript: <SiTypescript size={30} className="skill-icon skill-icon--typescript" />,
+        aws: <FaAws size={30} className="skill-icon skill-icon--aws" />,
+        postgresql: <SiPostgresql size={30} className="skill-icon skill-icon--postgresql" />,
+        mysql: <SiMysql size={30} className="skill-icon skill-icon--mysql" />,
+        python: <SiPython size={30} className="skill-icon skill-icon--python" />,
+        r: <SiR size={30} className="skill-icon skill-icon--r" />,
+        tensorflow: <SiTensorflow size={30} className="skill-icon skill-icon--tensorflow" />,
+        docker: <SiDocker size={30} className="skill-icon skill-icon--docker" />,
+        terraform: <SiTerraform size={30} className="skill-icon skill-icon--terraform" />
     };
 
     return (
         <div className="home-wrapper">
-            <TableOfContents />
             <div className="home">
-                {/* Hero Section */}
+                {/* 1. Top Pill Alert for KetchUp Desktop (Round Toggle-like Single Line) */}
+                <div className="home__pill-alert-wrapper">
+                    <Link to="/ketchup" className="home__pill-alert">
+                        <span className="home__pill-badge">
+                            <Sparkles size={12} />
+                            <span>NEW</span>
+                        </span>
+                        <span className="home__pill-text">
+                            <strong>KetchUp Desktop v0.2.4</strong> is out now
+                        </span>
+                        <span className="home__pill-action">
+                            <span>Detail</span>
+                            <ArrowRight size={13} />
+                        </span>
+                    </Link>
+                </div>
+
+                {/* 2. Main Hero: Prominent Avatar & AI Chat Interaction */}
                 <section className="home__hero" id="home">
                     <div className="home__hero-container">
+                        {/* Left Column: Avatar Photo (Large) & Profile Identifiers */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="home__hero-visual"
+                            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                            className="home__hero-profile"
                         >
                             <div className="home__hero-avatar">
-                                <div className="home__hero-avatar-bg"></div>
-                                <img src="/images/night.jpg" alt="Profile" className="home__hero-avatar-img" />
+                                <img src="/images/night.jpg" alt="Ryo" className="home__hero-avatar-img" />
                             </div>
-                            <p className="home__hero-short-bio">
-                                {t('heroShortBio')}
-                            </p>
+
+                            <div className="home__hero-info">
+                                <div className="home__hero-badge">
+                                    <Terminal size={14} />
+                                    <span>{t('heroTitle')}</span>
+                                </div>
+                                <h1 className="home__hero-name">Ryo</h1>
+                            </div>
                         </motion.div>
 
+                        {/* Right Column: AI Chatbot (Prominent conversation area) */}
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="home__hero-content"
+                            transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                            className="home__hero-chat-wrapper"
                         >
-                            <h2 className="home__hero-chattitle" style={{ marginBottom: '1.2rem', fontSize: '1.6rem', fontWeight: 'bold' }}>
-                                💬 {t('heroChatTitle')}
-                            </h2>
-                            <AIChatbot />
+                            <div className="home__hero-chat-header">
+                                <MessageSquare size={20} />
+                                <h2>{t('heroChatTitle')}</h2>
+                            </div>
+
+                            <div className="home__hero-chat-box">
+                                <AIChatbot />
+                            </div>
                         </motion.div>
                     </div>
                 </section>
 
-                {/* Personality Section (About) */}
-                <section className="home__personality" id="about">
+                {/* 3. About & Personality Section */}
+                <section className="home__personality" id="about" style={{ paddingTop: '2.5rem' }}>
                     <div className="home__container">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__section-header"
-                        >
+                        <div className="home__section-header">
+                            <div className="home__section-kicker">
+                                <User size={16} />
+                                <span>Personality & Strengths</span>
+                            </div>
                             <h2 className="home__section-title">{t('personalityTitle')}</h2>
-                            <h3 className="home__personality-concept">{t('personalityConcept')}</h3>
-                            <p className="home__personality-intro">{t('personalityIntro')}</p>
-                        </motion.div>
+                            <p className="home__personality-concept">{t('personalityConcept')}</p>
+                        </div>
 
+                        {/* 3 Personality Cards */}
                         <div className="home__personality-grid">
                             {t('personalityPoints').map((point, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                                    className="home__personality-card"
-                                >
-                                    <div className="home__personality-card-number">0{index + 1}</div>
+                                <div key={index} className="home__personality-card">
+                                    <div className="home__personality-card-header">
+                                        <CheckCircle2 size={18} className="home__personality-check" />
+                                        <span className="home__personality-card-number">0{index + 1}</span>
+                                    </div>
                                     <h4 className="home__personality-card-title">{point.title}</h4>
                                     <p className="home__personality-card-description">{point.description}</p>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
 
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
-                            className="home__personality-tags"
-                        >
-                            {t('personalityTags').map((tag, index) => (
-                                <span key={index} className="home__personality-tag">{tag}</span>
-                            ))}
-                        </motion.div>
-
-                        {/* Brief Profile (formerly Personal Section) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__personal-content"
-                            style={{ marginTop: '5rem' }}
-                        >
-                            <h3 className="home__personality-concept" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>{t('briefProfile')}</h3>
-
-                            <div className="home__personal-body">
-                                <div className="home__personal-visual">
-                                    <div className="home__personal-image-container">
-                                        <img src="/images/pixar.jpg" alt="Personal" className="home__personal-image" />
-                                    </div>
-                                </div>
-
-                                <div className="home__personal-info">
-                                    <div className="home__personal-profile">
-                                        {[
-                                            { key: 'name', label: t('profileLabels').name, value: t('personalProfile').name },
-                                            { key: 'age', label: t('profileLabels').age, value: t('personalProfile').age },
-                                            { key: 'location', label: t('profileLabels').location, value: t('personalProfile').location },
-                                            { key: 'education', label: t('profileLabels').education, value: t('personalProfile').education },
-                                            { key: 'interests', label: t('profileLabels').interests, value: t('personalProfile').interests }
-                                        ].map(item => (
-                                            <React.Fragment key={item.key}>
-                                                <div className="home__personal-label">{item.label}</div>
-                                                <div className="home__personal-value">{item.value}</div>
-                                            </React.Fragment>
-                                        ))}
-                                    </div>
-
-                                    <p className="home__personal-text">
-                                        {t('personalText1')}
-                                    </p>
-                                </div>
+                        {/* Profile Summary Card */}
+                        <div className="home__profile-card" style={{ maxWidth: '800px', margin: '2.5rem auto 0' }}>
+                            <h3 className="home__profile-title">{t('briefProfile')}</h3>
+                            <div className="home__personal-profile">
+                                {[
+                                    { key: 'name', label: t('profileLabels').name, value: t('personalProfile').name },
+                                    { key: 'age', label: t('profileLabels').age, value: t('personalProfile').age },
+                                    { key: 'education', label: t('profileLabels').education, value: t('personalProfile').education },
+                                    { key: 'interests', label: t('profileLabels').interests, value: t('personalProfile').interests }
+                                ].map(item => (
+                                    <React.Fragment key={item.key}>
+                                        <div className="home__personal-label">{item.label}</div>
+                                        <div className="home__personal-value">{item.value}</div>
+                                    </React.Fragment>
+                                ))}
                             </div>
-                        </motion.div>
-                    </div>
-                </section>
-
-                {/* Journey / Experience Section */}
-                <section className="home__experience home__experience--academic" id="work">
-                    <div className="home__container">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__section-title"
-                        >
-                            {t('academicExperience')}
-                        </motion.h2>
-                        <div className="home__timeline">
-                            {t('academicExp').map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, x: -30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    className="home__timeline-item"
-                                >
-                                    <div className="home__timeline-marker home__timeline-marker--academic"></div>
-                                    <div className="home__timeline-content">
-                                        <div className="home__timeline-header">
-                                            <h3 className="home__timeline-role">{item.role}</h3>
-                                            <span className="home__timeline-year">{item.year}</span>
-                                        </div>
-                                        <div className="home__timeline-company">{item.company}</div>
-                                        <p className="home__timeline-description">{item.description}</p>
-                                        <div className="home__timeline-tech">
-                                            {item.technologies.map(tech => (
-                                                <span key={tech} className="home__tech-tag home__tech-tag--academic">{tech}</span>
-                                            ))}
-                                        </div>
-                                        {item.links && (
-                                            <div className="home__project-links" style={{ marginTop: '0.75rem' }}>
-                                                {item.links.map((link, i) => (
-                                                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
-                                                        {link.label}
-                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                            <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                        </svg>
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        )}
-                                        {item.image && (
-                                            <img src={item.image} alt={item.company} className="home__timeline-image" />
-                                        )}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                <section className="home__experience home__experience--professional">
-                    <div className="home__container">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__section-title"
-                        >
-                            {t('professionalExperience')}
-                        </motion.h2>
-                        <div className="home__timeline">
-                            {t('professionalExp').map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, x: -30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    className="home__timeline-item"
-                                >
-                                    <div className="home__timeline-marker home__timeline-marker--professional"></div>
-                                    <div className="home__timeline-content">
-                                        <div className="home__timeline-header">
-                                            <h3 className="home__timeline-role">{item.role}</h3>
-                                            <span className="home__timeline-year">{item.year}</span>
-                                        </div>
-                                        <div className="home__timeline-company">{item.company}</div>
-                                        <p className="home__timeline-description">{item.description}</p>
-                                        <div className="home__timeline-tech">
-                                            {item.technologies.map(tech => (
-                                                <span key={tech} className="home__tech-tag home__tech-tag--professional">{tech}</span>
-                                            ))}
-                                        </div>
-                                        {item.links && (
-                                            <div className="home__project-links" style={{ marginTop: '0.75rem' }}>
-                                                {item.links.map((link, i) => (
-                                                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
-                                                        {link.label}
-                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                            <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                        </svg>
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        )}
-                                        {item.image && (
-                                            <img src={item.image} alt={item.company} className="home__timeline-image" />
-                                        )}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                <section className="home__experience home__experience--extracurricular">
-                    <div className="home__container">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__section-title"
-                        >
-                            {t('extracurricularActivities')}
-                        </motion.h2>
-                        <div className="home__timeline">
-                            {t('extracurricularExp').map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, x: -30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    className="home__timeline-item"
-                                >
-                                    <div className="home__timeline-marker home__timeline-marker--extracurricular"></div>
-                                    <div className="home__timeline-content">
-                                        <div className="home__timeline-header">
-                                            <h3 className="home__timeline-role">{item.role}</h3>
-                                            <span className="home__timeline-year">{item.year}</span>
-                                        </div>
-                                        <div className="home__timeline-company">{item.company}</div>
-                                        <p className="home__timeline-description">{item.description}</p>
-                                        <div className="home__timeline-tech">
-                                            {item.technologies.map(tech => (
-                                                <span key={tech} className="home__tech-tag home__tech-tag--extracurricular">{tech}</span>
-                                            ))}
-                                        </div>
-                                        {item.links && (
-                                            <div className="home__project-links" style={{ marginTop: '0.75rem' }}>
-                                                {item.links.map((link, i) => (
-                                                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
-                                                        {link.label}
-                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                            <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                        </svg>
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        )}
-                                        {item.image && (
-                                            <img src={item.image} alt={item.company} className="home__timeline-image" />
-                                        )}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-
-                {/* Skills Section */}
-                <section className="home__skills" id="skills">
-                    <div className="home__skills-marquee-wrapper">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__skills-title"
-                        >
-                            {t('skillsTitle')}
-                        </motion.h2>
-
-                        <div className="home__marquee">
-                            {(() => {
-                                // Filter skills that have a defined icon
-                                const validSkills = t('skills').filter(skill => SKILL_ICONS[skill.key]);
-                                const midPoint = Math.ceil(validSkills.length / 2);
-                                const row1Skills = validSkills.slice(0, midPoint);
-                                const row2Skills = validSkills.slice(midPoint);
-
-                                return (
-                                    <>
-                                        {/* Row 1: Left to Right */}
-                                        <div className="home__marquee-row">
-                                            <div className="home__marquee-track">
-                                                {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
-                                                    <div key={`row1-${skill.key}-${index}`} className="home__marquee-item" title={skill.name}>
-                                                        {SKILL_ICONS[skill.key]}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* Row 2: Right to Left */}
-                                        <div className="home__marquee-row home__marquee-row--reverse">
-                                            <div className="home__marquee-track">
-                                                {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
-                                                    <div key={`row2-${skill.key}-${index}`} className="home__marquee-item" title={skill.name}>
-                                                        {SKILL_ICONS[skill.key]}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </>
-                                );
-                            })()}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Projects Section */}
-                <section className="home__projects" id="projects">
-                    <div className="home__projects-container">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                            className="home__projects-header"
-                        >
-                            <h2 className="home__projects-title">{t('projectsTitle')}</h2>
-                            <p className="home__projects-subtitle">
-                                {t('projectsSubtitle')}
+                            <p className="home__personal-text" style={{ marginTop: '1.25rem' }}>
+                                {t('personalText1')}
                             </p>
-                        </motion.div>
+                        </div>
+                    </div>
+                </section>
 
-                        <div className="home__projects-list">
-                            {t('projects').map((project, index) => (
-                                <motion.article
-                                    key={project.title}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-10%" }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    className="home__project-card"
-                                >
-                                    <div className="home__project-header">
-                                        <span className="home__project-number">{String(index + 1).padStart(2, '0')}</span>
-                                        <div className="home__project-meta">
-                                            <span className={`home__project-category`}>{project.category}</span>
-                                            <span className={`home__project-status home__project-status--${project.type}`}>
-                                                {project.status}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    {project.image && (
-                                        <div className="home__project-image-container">
-                                            <img
-                                                src={project.image}
-                                                alt={project.title}
-                                                className="home__project-image"
-                                                style={{ objectPosition: project.imagePosition || 'center' }}
-                                            />
-                                        </div>
-                                    )}
-                                    <h3 className="home__project-title">{project.title}</h3>
-                                    <p className="home__project-description">{project.description}</p>
-                                    <div className="home__project-tags">
-                                        {project.tags.map(tag => (
-                                            <span key={tag} className="home__project-tag">{tag}</span>
-                                        ))}
-                                    </div>
-                                    <div className="home__project-links">
-                                        {project.links && project.links.map((link, i) => (
-                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="home__project-link">
-                                                {link.label}
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </a>
-                                        ))}
-                                        {/* Fallback for single link if any exist in other entries not updated (safety) */}
-                                        {project.link && !project.links && (
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="home__project-link">
-                                                {t('viewProject')}
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </a>
-                                        )}
-                                    </div>
-                                </motion.article>
+                {/* 4. Skills & Technologies Section */}
+                <section className="home__skills" id="skills" style={{ paddingTop: '2.5rem', paddingBottom: '4rem' }}>
+                    <div className="home__container">
+                        <div className="home__section-header">
+                            <div className="home__section-kicker">
+                                <Cpu size={16} />
+                                <span>Tech Stack</span>
+                            </div>
+                            <h2 className="home__section-title">{t('skillsTitle')}</h2>
+                        </div>
+
+                        {/* Skills Grid */}
+                        <div className="home__skills-grid-compact">
+                            {t('skills').map(skill => (
+                                <div key={skill.key} className="home__skill-pill">
+                                    {SKILL_ICONS[skill.key]}
+                                    <span className="home__skill-pill-name">{skill.name}</span>
+                                </div>
                             ))}
                         </div>
                     </div>

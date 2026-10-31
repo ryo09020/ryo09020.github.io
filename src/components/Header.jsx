@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
@@ -28,31 +28,10 @@ const Header = () => {
     }, [location]);
 
     const navItems = [
-        { path: '#home', label: t('home') },
-        { path: '#about', label: t('about') },
-        { path: '#work', label: t('work') },
+        { path: '/', label: t('home') },
+        { path: '/work', label: t('work') },
+        { path: '/card', label: 'Card' },
     ];
-
-    const handleNavClick = (e, path) => {
-        e.preventDefault();
-        setIsMenuOpen(false); // Close menu first
-
-        setTimeout(() => {
-            const element = document.querySelector(path);
-            if (element) {
-                const offset = 80; // Header height
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = element.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }, 100);
-    };
 
     return (
         <motion.header
@@ -63,7 +42,7 @@ const Header = () => {
         >
             <div className="header__container">
                 {/* Logo */}
-                <Link to="/card" className="header__logo">
+                <Link to="/" className="header__logo">
                     <motion.div
                         className="header__logo-text"
                         initial="rest"
@@ -143,14 +122,14 @@ const Header = () => {
                 {/* Desktop Navigation */}
                 <nav className="header__nav">
                     {navItems.map((item) => (
-                        <a
+                        <NavLink
                             key={item.path}
-                            href={item.path}
-                            className="header__nav-link"
-                            onClick={(e) => handleNavClick(e, item.path)}
+                            to={item.path}
+                            className={({ isActive }) => `header__nav-link ${isActive ? 'header__nav-link--active' : ''}`}
                         >
-                            {item.label}
-                        </a>
+                            <span>{item.label}</span>
+                            {item.badge && <span className="header__nav-badge">{item.badge}</span>}
+                        </NavLink>
                     ))}
                 </nav>
 
@@ -213,13 +192,14 @@ const Header = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1, duration: 0.3 }}
                                 >
-                                    <a
-                                        href={item.path}
-                                        className="header__mobile-link"
-                                        onClick={(e) => handleNavClick(e, item.path)}
+                                    <NavLink
+                                        to={item.path}
+                                        className={({ isActive }) => `header__mobile-link ${isActive ? 'header__mobile-link--active' : ''}`}
+                                        onClick={() => setIsMenuOpen(false)}
                                     >
-                                        {item.label}
-                                    </a>
+                                        <span>{item.label}</span>
+                                        {item.badge && <span className="header__nav-badge">{item.badge}</span>}
+                                    </NavLink>
                                 </motion.div>
                             ))}
                         </nav>

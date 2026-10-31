@@ -5,6 +5,50 @@ export const translations = {
     about: 'About',
     work: 'Work',
 
+    // Announcement
+    announcementBadge: 'NEW RELEASE',
+    announcementText: 'KetchUp for Desktop v0.2.4 is out now!',
+    announcementLinkText: 'Download Latest',
+
+    // Main Intent Tabs
+    tabOverview: 'All Overview',
+    tabKetchup: 'KetchUp Desktop',
+    tabProjectsNav: 'Projects',
+    tabExperienceNav: 'Experience',
+    tabSkillsNav: 'Skills',
+    tabAboutNav: 'About & AI',
+
+    // Other Pages Hub
+    exploreMore: 'Explore More',
+    otherPagesTitle: 'Other Pages',
+    ketchupPageDesc: 'Check out the dedicated native desktop app release with feature highlights and download links.',
+    workPageDesc: 'Explore software engineering projects, academic research, community activities, and tech stack.',
+    cardPageDesc: 'Interactive 3D business card with quick contact information and QR sharing.',
+    viewPage: 'View Page',
+    openCard: 'Open Card',
+
+    // Featured KetchUp Showcase
+    featuredBadge: 'LATEST RELEASE',
+    featuredTitle: 'KetchUp for Desktop',
+    featuredTagline: 'Task management evolved. Now native on your desktop.',
+    featuredDescription: 'The task management platform "KetchUp" is now available as a dedicated desktop application. Designed to be lightweight, distraction-free, and always within reach.',
+    featuredFeature1Title: 'Native & Snappy',
+    featuredFeature1Desc: 'Built as a native application for instant access and swift responsiveness.',
+    featuredFeature2Title: 'Seamless Workflow',
+    featuredFeature2Desc: 'Desktop-grade experience that keeps your daily tasks accessible without browser clutter.',
+    featuredFeature3Title: 'Focus Mode',
+    featuredFeature3Desc: 'Keep priorities top of mind without getting lost in dozens of open browser tabs.',
+    featuredDownloadBtn: 'Download on GitHub Releases (v0.2.4)',
+    featuredDownloadNote: 'Safely view installer (.dmg) and release notes directly on GitHub',
+
+    // Experience Section Tabs
+    experienceTitle: 'Experience & Journey',
+    experienceSubtitle: 'Academic background, professional software engineering, and community achievements',
+    tabAll: 'All',
+    tabAcademic: 'Academic',
+    tabProfessional: 'Professional',
+    tabExtracurricular: 'Extracurricular',
+
     // Home Page
     heroTitle: 'Software Engineer',
     heroChatTitle: "Let's talk with AI Ryo!!",
@@ -28,6 +72,7 @@ export const translations = {
     skills: [
       { key: 'rails', name: 'Ruby on Rails' },
       { key: 'go', name: 'Golang' },
+      { key: 'rust', name: 'Rust' },
       { key: 'react', name: 'React' },
       { key: 'typescript', name: 'TypeScript' },
       { key: 'aws', name: 'AWS' },
@@ -46,12 +91,12 @@ export const translations = {
       {
         title: 'Ketchup',
         description: 'A comprehensive task management platform adopted by the Tohoku University Student Project. I developed this to solve real-world productivity challenges, focusing on utility and user experience. The app is publicly available.',
-        tags: ['TypeScript', 'React', 'PostgreSQL'],
+        tags: ['TypeScript', 'React', 'PostgreSQL', 'Desktop'],
         status: 'Completed',
         type: 'completed',
         category: 'Academic',
         links: [
-          { label: 'App', url: 'https://ketch-up.net' },
+          { label: 'Desktop App (Latest)', url: 'https://github.com/ryo09020/ketchup-desktop/releases/latest' },
           { label: 'News', url: 'https://www.is.tohoku.ac.jp/jp/news/information/detail---id-5563.html' }
         ],
         image: '/images/ketchup.png',
@@ -127,8 +172,7 @@ export const translations = {
     personalText1: 'When I\'m not coding, I enjoy reading and playing video games (recently Smash Bros). I also practice Kyudo (Japanese Archery), which I have been doing since middle school. I love exploring new technologies and contributing to open-source projects.',
     personalProfile: {
       name: 'Ryo',
-      age: '24',
-      location: 'Sendai, Japan',
+      age: '25',
       interests: 'Reading, Video Games, Kyudo (Archery), Photography, Traveling',
       education: 'Tohoku Univ. (Master)'
     },
@@ -234,7 +278,7 @@ export const translations = {
 
     // Skills Categories
     skillsCategories: {
-      'Backend': ['Ruby on Rails', 'Go', 'Node.js', 'API Design'],
+      'Backend': ['Ruby on Rails', 'Go', 'Rust', 'Node.js', 'API Design'],
       'Frontend': ['React', 'TypeScript', 'JavaScript', 'HTML/CSS'],
       'Cloud & DevOps': ['AWS', 'Docker', 'CI/CD', 'Infrastructure'],
       'Database': ['PostgreSQL', 'MySQL', 'Redis', 'Database Design'],
@@ -263,11 +307,11 @@ export const translations = {
     ],
 
     // Footer
-    footerDescription: 'Software Engineer based in Sendai, Japan',
+    footerDescription: 'Let\'s build something together',
     connect: 'Connect',
     contact: 'Contact',
     allRightsReserved: 'All rights reserved.',
-    madeWithLove: 'Made with ❤️ in Sendai',
+    madeWithLove: 'Crafted with Passion',
 
     // Common
     viewProject: 'View Project',
@@ -282,6 +326,50 @@ export const translations = {
     home: 'ホーム',
     about: 'プロフィール',
     work: '実績',
+
+    // Announcement
+    announcementBadge: '新リリース',
+    announcementText: 'KetchUp デスクトップ版 v0.2.4 を公開しました！',
+    announcementLinkText: '最新版をダウンロード',
+
+    // Main Intent Tabs
+    tabOverview: '全体サマリー',
+    tabKetchup: 'KetchUp Desktop',
+    tabProjectsNav: 'プロジェクト',
+    tabExperienceNav: '経歴・実績',
+    tabSkillsNav: 'スキル',
+    tabAboutNav: '人物像・AI',
+
+    // Other Pages Hub
+    exploreMore: '目的別にページを見る',
+    otherPagesTitle: 'その他のページ',
+    ketchupPageDesc: 'タスク管理アプリKetchUpの専用デスクトップ版（v0.2.4）。機能詳細やダウンロードリンクを掲載。',
+    workPageDesc: 'これまでに開発したWebアプリケーション、大学院での学術研究、ハッカソン・実務実績、スキル一覧。',
+    cardPageDesc: '3Dインタラクティブなデジタル名刺。連絡先やQRコードなどをコンパクトに閲覧できます。',
+    viewPage: 'ページを見る',
+    openCard: '名刺を開く',
+
+    // Featured KetchUp Showcase
+    featuredBadge: 'NEW RELEASE',
+    featuredTitle: 'KetchUp for Desktop',
+    featuredTagline: 'タスク管理を、もっと身近に。待望のデスクトップ版が登場。',
+    featuredDescription: '東北大学学生プロジェクト採択のタスク管理アプリ「KetchUp」が、専用デスクトップアプリとして利用可能になりました。ブラウザのタブから独立し、よりスムーズかつ集中できる作業環境を提供します。',
+    featuredFeature1Title: 'ネイティブな軽快さ',
+    featuredFeature1Desc: '手元で瞬時に立ち上がり、思考を妨げない軽快なレスポンス。',
+    featuredFeature2Title: '快適なワークフロー',
+    featuredFeature2Desc: 'デスクトップ専用ウィンドウで、他の作業をしながらでも素早くアクセス。',
+    featuredFeature3Title: '集中できる環境',
+    featuredFeature3Desc: '大量のブラウザタブに埋もれることなく、今日のタスクにすぐフォーカス。',
+    featuredDownloadBtn: 'GitHub Releasesでダウンロード (v0.2.4)',
+    featuredDownloadNote: '※ GitHubの公式リリースページへ移動します。インストーラー（.dmg）の確認や安全なダウンロードが可能です',
+
+    // Experience Section Tabs
+    experienceTitle: '経歴・活動実績',
+    experienceSubtitle: '学術研究、ソフトウェアエンジニア実務、ハッカソン・課外活動の歩み',
+    tabAll: 'すべて',
+    tabAcademic: '学業',
+    tabProfessional: '実務',
+    tabExtracurricular: '課外活動',
 
     // Home Page
     heroTitle: 'ソフトウェアエンジニア',
@@ -306,6 +394,7 @@ export const translations = {
     skills: [
       { key: 'rails', name: 'Ruby on Rails' },
       { key: 'go', name: 'Golang' },
+      { key: 'rust', name: 'Rust' },
       { key: 'react', name: 'React' },
       { key: 'typescript', name: 'TypeScript' },
       { key: 'aws', name: 'AWS' },
@@ -324,12 +413,12 @@ export const translations = {
       {
         title: 'Ketchup',
         description: '東北大学学生プロジェクトに採択されたタスク管理プラットフォームとして、実用性とユーザー体験を追求し開発したプロジェクトです。アプリは公開中です。',
-        tags: ['TypeScript', 'React', 'PostgreSQL'],
+        tags: ['TypeScript', 'React', 'PostgreSQL', 'Desktop'],
         status: '完了',
         type: 'completed',
         category: '学業',
         links: [
-          { label: 'アプリ', url: 'https://ketch-up.net' },
+          { label: 'デスクトップ版 (最新)', url: 'https://github.com/ryo09020/ketchup-desktop/releases/latest' },
           { label: 'ニュース', url: 'https://www.is.tohoku.ac.jp/jp/news/information/detail---id-5563.html' }
         ],
         image: '/images/ketchup.png',
@@ -406,8 +495,7 @@ export const translations = {
     personalText1: 'コーディングや勉強をしていない時は、読書やゲームを楽しんでいます。また、中学時代から続けている弓道も行っています。技術革新の最前線に立ち続けることを大切にしています。',
     personalProfile: {
       name: 'Ryo',
-      age: '24',
-      location: '宮城県 仙台市',
+      age: '25',
       interests: '読書, ゲーム, 弓道 (中学〜), 写真, 旅行',
       education: '東北大学大学院 情報科学研究科'
     },
@@ -520,7 +608,7 @@ export const translations = {
 
     // Skills Categories
     skillsCategories: {
-      'バックエンド': ['Ruby on Rails', 'Go', 'Node.js', 'API設計'],
+      'バックエンド': ['Ruby on Rails', 'Go', 'Rust', 'Node.js', 'API設計'],
       'フロントエンド': ['React', 'TypeScript', 'JavaScript', 'HTML/CSS'],
       'クラウド・DevOps': ['AWS', 'Docker', 'CI/CD', 'インフラ'],
       'データベース': ['PostgreSQL', 'MySQL', 'Redis', 'データベース設計'],
@@ -549,11 +637,11 @@ export const translations = {
     ],
 
     // Footer
-    footerDescription: '仙台を拠点とするソフトウェアエンジニア',
+    footerDescription: '一緒に何か作ろうよ',
     connect: '連絡先',
     contact: 'お問い合わせ',
     allRightsReserved: 'All rights reserved.',
-    madeWithLove: '仙台で❤️を込めて作成',
+    madeWithLove: 'Crafted with Passion',
 
     // Common
     viewProject: 'プロジェクトを見る',
