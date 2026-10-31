@@ -307,7 +307,7 @@ export const translations = {
     ],
 
     // Footer
-    footerDescription: '"Let\'s build something awesome together." Software Engineer crafting joyful apps',
+    footerDescription: 'Let\'s build something together',
     connect: 'Connect',
     contact: 'Contact',
     allRightsReserved: 'All rights reserved.',
@@ -637,7 +637,7 @@ export const translations = {
     ],
 
     // Footer
-    footerDescription: 'Webアプリケーションや実用的なツール開発に取り組むソフトウェアエンジニア',
+    footerDescription: '一緒に何か作ろうよ',
     connect: '連絡先',
     contact: 'お問い合わせ',
     allRightsReserved: 'All rights reserved.',
