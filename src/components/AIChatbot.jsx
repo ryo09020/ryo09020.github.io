@@ -107,53 +107,51 @@ const AIChatbot = () => {
     };
 
     return (
-        <div className="home__openwebui-container">
-            <div className="ai-chatbot">
-                <div className="ai-chatbot__header">
-                    <div className="ai-chatbot__avatar">
-                        <img src="/images/night.jpg" alt="AI Ryo" />
-                    </div>
-                    <div className="ai-chatbot__status">
-                        <h4>AI Ryo</h4>
-                        <span>{isTyping ? 'Typing...' : 'Online'}</span>
-                    </div>
+        <div className="ai-chatbot">
+            <div className="ai-chatbot__header">
+                <div className="ai-chatbot__avatar">
+                    <img src="/images/night.jpg" alt="AI Ryo" />
                 </div>
+                <div className="ai-chatbot__status">
+                    <h4>AI Ryo</h4>
+                    <span>{isTyping ? 'Typing...' : 'Online'}</span>
+                </div>
+            </div>
 
-                <div className="ai-chatbot__messages" ref={messagesContainerRef}>
-                    {messages.map(msg => (
-                        <div key={msg.id} className={`ai-chatbot__message ai-chatbot__message--${msg.role}`}>
-                            <div className="ai-chatbot__bubble">
-                                {msg.isGreeting ? t('heroChatGreeting') : msg.text}
-                            </div>
+            <div className="ai-chatbot__messages" ref={messagesContainerRef}>
+                {messages.map(msg => (
+                    <div key={msg.id} className={`ai-chatbot__message ai-chatbot__message--${msg.role}`}>
+                        <div className="ai-chatbot__bubble">
+                            {msg.isGreeting ? t('heroChatGreeting') : msg.text}
                         </div>
-                    ))}
-                    {isTyping && (
-                        <div className="ai-chatbot__message ai-chatbot__message--ai">
-                            <div className="ai-chatbot__bubble ai-chatbot__typing">
-                                <span className="dot"></span><span className="dot"></span><span className="dot"></span>
-                            </div>
+                    </div>
+                ))}
+                {isTyping && (
+                    <div className="ai-chatbot__message ai-chatbot__message--ai">
+                        <div className="ai-chatbot__bubble ai-chatbot__typing">
+                            <span className="dot"></span><span className="dot"></span><span className="dot"></span>
                         </div>
-                    )}
-                </div>
+                    </div>
+                )}
+            </div>
 
-                <form className="ai-chatbot__input-area" onSubmit={handleSend}>
-                    <input
-                        type="text"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        placeholder={t('heroChatPlaceholder')}
-                        autoComplete="off"
-                    />
-                    <button type="submit" disabled={!inputValue.trim() || isTyping}>
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
-                </form>
-                <div className="ai-chatbot__disclaimer">
-                    {t('heroChatDisclaimer')}
-                </div>
+            <form className="ai-chatbot__input-area" onSubmit={handleSend}>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder={t('heroChatPlaceholder')}
+                    autoComplete="off"
+                />
+                <button type="submit" disabled={!inputValue.trim() || isTyping}>
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </form>
+            <div className="ai-chatbot__disclaimer">
+                {t('heroChatDisclaimer')}
             </div>
         </div>
     );
